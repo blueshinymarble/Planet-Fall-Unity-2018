@@ -24,7 +24,7 @@ public class Board : MonoBehaviour
 	void Start ()
     {
         myAnim = GetComponent<Animator>();
-        myAnim.Play("board spawning tiles");
+        //myAnim.Play("board spawning tiles");
 	}
 	
 	public void ChooseTile(TerrainTilesEnum tile, Transform child)
@@ -43,7 +43,7 @@ public class Board : MonoBehaviour
             case TerrainTilesEnum.forest2:
                 if (myForestTwoCount > 0)
                 {
-                    GameObject newForest2 = Instantiate(forest01, child.transform.position, Quaternion.identity);
+                    GameObject newForest2 = Instantiate(forest02, child.transform.position, Quaternion.identity);
                     newForest2.transform.parent = child;
                     myForestTwoCount--;
                 }
@@ -52,7 +52,7 @@ public class Board : MonoBehaviour
             case TerrainTilesEnum.forest3:
                 if (myForestThreeCount > 0)
                 {
-                    GameObject newForest3 = Instantiate(forest01, child.transform.position, Quaternion.identity);
+                    GameObject newForest3 = Instantiate(forest03, child.transform.position, Quaternion.identity);
                     newForest3.transform.parent = child;
                     myForestThreeCount--;
                 }
@@ -61,7 +61,7 @@ public class Board : MonoBehaviour
             case TerrainTilesEnum.mountain1:
                 if (myMountainOneCount > 0)
                 {
-                    GameObject newMountain1 = Instantiate(forest01, child.transform.position, Quaternion.identity);
+                    GameObject newMountain1 = Instantiate(mountain01, child.transform.position, Quaternion.identity);
                     newMountain1.transform.parent = child;
                     myMountainOneCount--;
                 }
@@ -70,7 +70,7 @@ public class Board : MonoBehaviour
             case TerrainTilesEnum.mountain2:
                 if (myMountainTwoCount > 0)
                 {
-                    GameObject newMountain2 = Instantiate(forest01, child.transform.position, Quaternion.identity);
+                    GameObject newMountain2 = Instantiate(mountain02, child.transform.position, Quaternion.identity);
                     newMountain2.transform.parent = child;
                     myMountainTwoCount--;
                 }
@@ -79,7 +79,7 @@ public class Board : MonoBehaviour
             case TerrainTilesEnum.hazard:
                 if (myHazardCount > 0)
                 {
-                    GameObject newHazard = Instantiate(forest01, child.transform.position, Quaternion.identity);
+                    GameObject newHazard = Instantiate(hazard, child.transform.position, Quaternion.identity);
                     newHazard.transform.parent = child;
                     myHazardCount--;
                 }
