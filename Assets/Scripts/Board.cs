@@ -27,7 +27,7 @@ public class Board : MonoBehaviour
         myAnim.Play("board spawning tiles");
 	}
 	
-	public void PopulateBoard(TerrainTilesEnum tile, Transform child)
+	public void ChooseTile(TerrainTilesEnum tile, Transform child)
     {
         switch (tile)
         {
