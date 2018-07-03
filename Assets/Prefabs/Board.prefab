@@ -1546,7 +1546,7 @@ MonoBehaviour:
   forest03: {fileID: 1997551960458740, guid: 662bc7e91cba02244a695128babcb13f, type: 2}
   mountain01: {fileID: 1233456897095146, guid: 393df5702701d994da8c044b724f8c26, type: 2}
   mountain02: {fileID: 1619130877518616, guid: 95fc296e680087b498490468843dc343, type: 2}
-  hazard: {fileID: 1242304269079348, guid: 39e11fdecb33e1549bd2eac19572de4f, type: 2}
+  hazard: {fileID: 1479136428849978, guid: 39e11fdecb33e1549bd2eac19572de4f, type: 2}
 --- !u!114 &114859056849710040
 MonoBehaviour:
   m_ObjectHideFlags: 1

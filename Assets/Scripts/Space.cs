@@ -6,12 +6,9 @@ public class Space : MonoBehaviour
 {
     public GameObject[] TerrainTiles;
 
-    private TurnFlowManager turnFlowManager;
-
 	// Use this for initialization
 	void Start ()
     {
-        turnFlowManager = GameObject.Find("Turn Flow Manager").GetComponent<TurnFlowManager>();
         Board board = GameObject.Find("Board").GetComponent<Board>();
         while (gameObject.transform.childCount < 1)
         {

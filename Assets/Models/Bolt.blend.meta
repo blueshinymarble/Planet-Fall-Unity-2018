@@ -1,24 +1,14 @@
 fileFormatVersion: 2
-guid: 7287bef732ebbae4c9ae0f35b14cb746
+guid: 169132acd3cad2548ac862f4aa40aeb3
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Mesh1_Group1_Model_002
-    100002: Mesh1_Plate_Grass_Dirt_Model
-    100004: //RootNode
-    400000: Mesh1_Group1_Model_002
-    400002: Mesh1_Plate_Grass_Dirt_Model
-    400004: //RootNode
-    2100000: Wood_002
-    2100002: Wood
-    2100004: Lava
-    2100006: Leafs
-    2300000: Mesh1_Group1_Model_002
-    2300002: Mesh1_Plate_Grass_Dirt_Model
-    3300000: Mesh1_Group1_Model_002
-    3300002: Mesh1_Plate_Grass_Dirt_Model
-    4300000: Mesh1_Group1_Model_002
-    4300002: Mesh1_Plate_Grass_Dirt_Model
+    100000: //RootNode
+    400000: //RootNode
+    2100000: Material_004
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Cube
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

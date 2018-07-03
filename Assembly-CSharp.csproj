@@ -63,6 +63,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BloomController.cs" />
     <Compile Include="Assets\Scripts\Board.cs" />
+    <Compile Include="Assets\Scripts\ButtonController.cs" />
+    <Compile Include="Assets\Scripts\Hazard.cs" />
     <Compile Include="Assets\Scripts\Space.cs" />
     <Compile Include="Assets\Scripts\TurnFlowManager.cs" />
     <Reference Include="UnityEditor.StandardEvents">

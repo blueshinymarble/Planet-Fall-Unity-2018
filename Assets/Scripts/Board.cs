@@ -18,12 +18,12 @@ public class Board : MonoBehaviour
     public GameObject hazard;
     public enum TerrainTilesEnum { forest1, forest2, forest3, mountain1, mountain2, hazard};
 
-    private Animator myAnim;
+    //private Animator myAnim;
   
 	// Use this for initialization
 	void Start ()
     {
-        myAnim = GetComponent<Animator>();
+        //myAnim = GetComponent<Animator>();
         //myAnim.Play("board spawning tiles");
 	}
 	
