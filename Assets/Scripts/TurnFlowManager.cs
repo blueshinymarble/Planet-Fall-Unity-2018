@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TurnFlowManager : MonoBehaviour {
 
+    public enum State { }
+    public State currentState;
 	// Use this for initialization
 	void Start () {
 		
