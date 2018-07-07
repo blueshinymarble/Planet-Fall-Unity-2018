@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120296}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 14.2, z: 0}
+  m_LocalPosition: {x: 0, y: 21.4, z: -16.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -104,20 +104,20 @@ MonoBehaviour:
   targetingSettingsFoldout: 1
   inputSettingsFoldout: 1
   useFixedUpdate: 0
-  keyboardMovementSpeed: 10
+  keyboardMovementSpeed: 100
   screenEdgeMovementSpeed: 3
   followingSpeed: 5
-  rotationSped: 50
-  panningSpeed: 70
+  rotationSped: 25
+  panningSpeed: 25
   mouseRotationSpeed: 100
   autoHeight: 1
   groundMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 4294967295
   maxHeight: 15
-  minHeight: 15
-  heightDampening: 5
-  keyboardZoomingSensitivity: 2
+  minHeight: 10
+  heightDampening: 25
+  keyboardZoomingSensitivity: 25
   scrollWheelZoomingSensitivity: 25
   limitMap: 1
   limitX: 25

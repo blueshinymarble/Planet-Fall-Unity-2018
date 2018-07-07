@@ -27,6 +27,7 @@ public class TurnFlowManager : MonoBehaviour
 
     public void SpaceForBase()
     {
-        announcer.GetComponentInChildren<Text>().text = "Choose a space to place your base.";
+        announcer.GetComponentInChildren<Text>().text = "Choose a valid space (not a hazard or another player's base) to place your base.";
+        announcer.GetComponent<Animator>().Play("announcer appear");
     }
 }
