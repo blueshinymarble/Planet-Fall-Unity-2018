@@ -7,9 +7,12 @@ public class MyTile : MonoBehaviour
     public GameObject[] TerrainTiles;
     public GameObject powerPlant;
 
+    private TurnFlowManager turnFlowManager;
+
     // Use this for initialization
     void Start()
     {
+        turnFlowManager = GameObject.Find("Turn Flow Manager").GetComponent<TurnFlowManager>();
         Board board = GameObject.Find("Board").GetComponent<Board>();
         while (gameObject.transform.childCount < 1)
         {
@@ -32,9 +35,12 @@ public class MyTile : MonoBehaviour
     {
         if (gameObject.tag != "Hazard")
         {
-            GameObject newBase = Instantiate(powerPlant, transform.position, Quaternion.identity);
-            newBase.transform.parent = gameObject.transform;
-            MinimiseTerrain();
+            if (turnFlowManager.currentState == TurnFlowManager.State.firstRound)
+            {
+                GameObject newBase = Instantiate(powerPlant, transform.position, Quaternion.identity);
+                newBase.transform.parent = gameObject.transform;
+                MinimiseTerrain();
+            }
         }
     }
 

@@ -20,10 +20,7 @@ public class ButtonController : MonoBehaviour
 
     public void Next()
     {
-        switch (turnFlowManager.currentState)
-        {
-
-        }
+        turnFlowManager.ManageTurn();
     }
 
 }
