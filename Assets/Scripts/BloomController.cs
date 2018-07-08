@@ -1,22 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BloomController : MonoBehaviour
 {
     public GameObject bloom;
+    public int controlTokens;
 
-
-
+    private Text controlCounterText;
 	// Use this for initialization
 	void Start ()
     {
-
+        controlTokens = Random.Range(3, 5);
+        controlCounterText = GameObject.Find("Control Token counter").GetComponentInChildren<Text>();
+        controlCounterText.text = "Control Tokens: " + controlTokens;
     }
     
-    void PlaceBloomToken()
+    public void PlaceBloomToken()
     {
-
+        if (controlTokens == 0)
+        {
+            ChooseSpaceSpawnBloom();//place new blooms and place one token;
+            controlCounterText.text = "Control Tokens: " + controlTokens;//display control counters;
+        }
+        else
+        {
+            //place a control token;
+            //display control counters;
+        }
     }
 
     public void ChooseSpaceSpawnBloom()

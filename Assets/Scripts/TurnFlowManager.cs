@@ -10,17 +10,23 @@ public class TurnFlowManager : MonoBehaviour
     public State currentState;
     public bool firstRound;
     public int currentRoundInt;
+    public bool playerBasePlaced;
 
     private GameObject roundAnnouncer;
-    private GameObject announcer;
+    private Text generalAnnouncer;
+    private BloomController bloomController;
+
 	// Use this for initialization
 	void Start ()
     {
+        playerBasePlaced = false;
         roundAnnouncer = GameObject.Find("Round counter");
         currentRoundInt = 1;
         firstRound = true;
-        announcer = GameObject.Find("Announcer");
+        generalAnnouncer = GameObject.Find("Announcer").GetComponentInChildren<Text>();
         currentState = State.roundBegins;
+        bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
+        generalAnnouncer.text = "Beginning of round";
 	}
 	
 	// Update is called once per frame
@@ -31,8 +37,8 @@ public class TurnFlowManager : MonoBehaviour
 
     public void SpaceForBase()
     {
-        announcer.GetComponentInChildren<Text>().text = "Choose a valid space (not a hazard or another player's base) to place your base.";
-        announcer.GetComponent<Animator>().Play("announcer appear");
+        generalAnnouncer.text = "Click a valid space (not a hazard or another player's base) to place your base";
+        generalAnnouncer.GetComponent<Animator>().Play("announcer appear");
     }
 
     public void ManageTurn()
@@ -49,23 +55,33 @@ public class TurnFlowManager : MonoBehaviour
                 }
                 else
                 {
+                    generalAnnouncer.text = "Click a control space to place a control counter";
                     currentState = TurnFlowManager.State.bloom;
+                    bloomController.ChooseSpaceSpawnBloom();
                 }
                 break;
 
             case TurnFlowManager.State.firstRound:
-                currentState = TurnFlowManager.State.bloom;
+                if (playerBasePlaced == true)
+                {
+                    currentState = TurnFlowManager.State.bloom;
+                    bloomController.ChooseSpaceSpawnBloom();
+                    generalAnnouncer.text = "Click a control space to place a control counter";
+                }
                 break;
 
             case TurnFlowManager.State.bloom:
                 currentState = TurnFlowManager.State.action;
+                generalAnnouncer.text = "Action phase";
                 break;
 
             case TurnFlowManager.State.action:
                 currentRoundInt++;
                 roundAnnouncer.GetComponentInChildren<Text>().text = "Round " + currentRoundInt;
+
                 if (currentRoundInt == 9)
                 {
+                    generalAnnouncer.text = "Scoring round begins";
                     roundAnnouncer.GetComponentInChildren<Text>().text = "Scoring Round";
                     currentState = State.scoring;
                 }
@@ -73,6 +89,7 @@ public class TurnFlowManager : MonoBehaviour
                 {
                     roundAnnouncer.GetComponentInChildren<Text>().text = "Round " + currentRoundInt;
                     currentState = State.roundBegins;
+                    generalAnnouncer.text = "Next round begins";
                 }
                 break;
         }

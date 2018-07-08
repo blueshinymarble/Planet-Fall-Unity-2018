@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MyTile : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class MyTile : MonoBehaviour
     public GameObject powerPlant;
 
     private TurnFlowManager turnFlowManager;
+    private BloomController bloomController;
+    private Text controlTokenCounter;
 
     // Use this for initialization
     void Start()
@@ -18,6 +21,8 @@ public class MyTile : MonoBehaviour
         {
             board.ChooseTile((Board.TerrainTilesEnum)Random.Range(0, 6), transform);
         }
+        bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
+        controlTokenCounter = GameObject.Find("Control Token counter").GetComponentInChildren<Text>();
     }
 
     // Update is called once per frame
@@ -33,14 +38,21 @@ public class MyTile : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (gameObject.tag != "Hazard")
+        if (gameObject.tag != "Hazard" && turnFlowManager.playerBasePlaced == false)
         {
             if (turnFlowManager.currentState == TurnFlowManager.State.firstRound)
             {
                 GameObject newBase = Instantiate(powerPlant, transform.position, Quaternion.identity);
                 newBase.transform.parent = gameObject.transform;
                 MinimiseTerrain();
+                turnFlowManager.playerBasePlaced = true;
             }
+        }
+        else if (turnFlowManager.currentState == TurnFlowManager.State.bloom)
+        {
+            gameObject.GetComponentInChildren<ControlPoint>().myControlTokens++;
+            bloomController.controlTokens--;
+            controlTokenCounter.text = "Control Tokens: " + bloomController.controlTokens;
         }
     }
 

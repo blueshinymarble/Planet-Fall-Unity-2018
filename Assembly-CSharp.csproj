@@ -64,7 +64,9 @@
     <Compile Include="Assets\RTS_Camera\Scripts\RTS_Camera.cs" />
     <Compile Include="Assets\Scripts\BloomController.cs" />
     <Compile Include="Assets\Scripts\Board.cs" />
+    <Compile Include="Assets\Scripts\Building.cs" />
     <Compile Include="Assets\Scripts\ButtonController.cs" />
+    <Compile Include="Assets\Scripts\ControlPoint.cs" />
     <Compile Include="Assets\Scripts\EndButton.cs" />
     <Compile Include="Assets\Scripts\Hazard.cs" />
     <Compile Include="Assets\Scripts\MyTile.cs" />
