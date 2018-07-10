@@ -14,11 +14,13 @@ public class MyTile : MonoBehaviour
     private Text controlTokenCounter;
     private Animator anim;
     private GameObject confirmCancel;
+    private RectTransform confirmCancelUIElement;
 
     // Use this for initialization
     void Start()
     {
-        confirmCancel = GameObject.Find("Confirm cancel base placement");
+        confirmCancelUIElement = GameObject.Find("Confirm base placement").GetComponent<RectTransform>();
+        confirmCancel = GameObject.Find("Confirm base placement");
         bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
         controlTokenCounter = GameObject.Find("Control Token counter").GetComponentInChildren<Text>();
         turnFlowManager = GameObject.Find("Turn Flow Manager").GetComponent<TurnFlowManager>();
@@ -62,6 +64,7 @@ public class MyTile : MonoBehaviour
     {
         if (gameObject.tag != "Hazard" && turnFlowManager.playerBasePlaced == false && turnFlowManager.currentState == TurnFlowManager.State.firstRound)
         {
+            turnFlowManager.playerBasePlaced = true;
             GameObject newBase = Instantiate(powerPlant, transform.position, Quaternion.identity);
             newBase.transform.parent = gameObject.transform;
             GameObject[] selectings = GameObject.FindGameObjectsWithTag("Selecting");
@@ -69,6 +72,7 @@ public class MyTile : MonoBehaviour
             {
                 Destroy(selecting);
             }
+            confirmCancel.transform.position = Input.mousePosition;
         }
         else if (turnFlowManager.currentState == TurnFlowManager.State.placeBloomAndCounters && bloomController.tokenPlaced == false && gameObject.tag == "Control Point")
         {

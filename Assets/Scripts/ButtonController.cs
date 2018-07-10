@@ -11,7 +11,7 @@ public class ButtonController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        confirmBaseButtons = GameObject.Find("Confirm cancel base placement").GetComponent<Animator>();
+        confirmBaseButtons = GameObject.Find("Confirm base placement").GetComponent<Animator>();
         bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
         turnFlowManager = GameObject.Find("Turn Flow Manager").GetComponent<TurnFlowManager>();
 	}
