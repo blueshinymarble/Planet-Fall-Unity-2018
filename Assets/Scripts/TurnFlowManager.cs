@@ -57,10 +57,7 @@ public class TurnFlowManager : MonoBehaviour
                     bloomController.ChooseSpaceSpawnBloom();
                     generalAnnouncer.text = "Click a control space to place a control counter"; //TODO
                 }
-                else if (firstRound == false && bloomController.controlTokens == 0 && currentRoundInt == 9)
-                {
-                    currentState = State.scoring;
-                }
+
                 /*if (bloomController.controlTokens != 0)
                 {
                     generalAnnouncer.text = "Click a control space to place a control counter";
@@ -112,10 +109,14 @@ public class TurnFlowManager : MonoBehaviour
             case State.action:
                 if (bloomController.controlTokens == 0 && currentRoundInt == 8)
                 {
-                    current
+                    currentState = State.finalScoring;
+                    generalAnnouncer.text = "Final scoring";
                 }
-                currentState = State.roundBegins;
-                generalAnnouncer.text = "Next turn";
+                else
+                {
+                    currentState = State.roundBegins;
+                    generalAnnouncer.text = "Next turn";
+                }
                 /*currentRoundInt++;
                 roundAnnouncer.GetComponentInChildren<Text>().text = "Round " + currentRoundInt;
 
