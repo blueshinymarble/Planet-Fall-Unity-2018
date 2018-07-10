@@ -617,7 +617,6 @@ GameObject:
   - component: {fileID: 4634304094153430}
   - component: {fileID: 114281965423987812}
   - component: {fileID: 65292426388455686}
-  - component: {fileID: 95763785266907926}
   m_Layer: 0
   m_Name: Space01
   m_TagString: Legal Space
@@ -670,7 +669,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4044844182689020
 Transform:
@@ -683,7 +682,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4048804486120420
 Transform:
@@ -696,7 +695,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4107542301545048
 Transform:
@@ -704,8 +703,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1817415366353458}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.90767336, y: 0.24321029, z: 0.08852132, w: 0.33036613}
+  m_LocalPosition: {x: 0, y: -1.928363, z: 2.2981334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4634304094153430}
@@ -713,38 +712,38 @@ Transform:
   - {fileID: 4197137910242558}
   - {fileID: 4855408247570002}
   - {fileID: 4144862643668338}
-  - {fileID: 4250079120388736}
   - {fileID: 4258032737455798}
   - {fileID: 4191581626756478}
+  - {fileID: 4250079120388736}
   - {fileID: 4751350253666326}
   - {fileID: 4871484157098538}
-  - {fileID: 4897304746637494}
   - {fileID: 4142596996550440}
-  - {fileID: 4392325434951702}
+  - {fileID: 4897304746637494}
   - {fileID: 4041368453897260}
+  - {fileID: 4392325434951702}
   - {fileID: 4991728703177412}
   - {fileID: 4849541811136250}
-  - {fileID: 4510179204183164}
   - {fileID: 4048804486120420}
   - {fileID: 4350765071802546}
+  - {fileID: 4510179204183164}
   - {fileID: 4810930741348780}
-  - {fileID: 4267150831258198}
   - {fileID: 4931968210258620}
-  - {fileID: 4495784355457188}
+  - {fileID: 4267150831258198}
   - {fileID: 4442845242180454}
-  - {fileID: 4509780353829426}
+  - {fileID: 4495784355457188}
   - {fileID: 4327943090098282}
+  - {fileID: 4509780353829426}
   - {fileID: 4440804660428410}
   - {fileID: 4119756787068374}
   - {fileID: 4902469174364494}
   - {fileID: 4512746454802970}
-  - {fileID: 4044844182689020}
   - {fileID: 4979352207088870}
+  - {fileID: 4044844182689020}
   - {fileID: 4195498127783556}
   - {fileID: 4232739761851554}
-  - {fileID: 4875553375528654}
   - {fileID: 4985901823724340}
   - {fileID: 4399081057262696}
+  - {fileID: 4875553375528654}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
@@ -772,7 +771,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4144862643668338
 Transform:
@@ -798,7 +797,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4195498127783556
 Transform:
@@ -850,7 +849,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4258032737455798
 Transform:
@@ -863,7 +862,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4267150831258198
 Transform:
@@ -876,7 +875,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4327943090098282
 Transform:
@@ -889,7 +888,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4350765071802546
 Transform:
@@ -902,7 +901,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4392325434951702
 Transform:
@@ -915,7 +914,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.000001, z: 1.000001}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4399081057262696
 Transform:
@@ -928,7 +927,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 36
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4440804660428410
 Transform:
@@ -954,7 +953,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4495784355457188
 Transform:
@@ -967,7 +966,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4509780353829426
 Transform:
@@ -980,7 +979,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4510179204183164
 Transform:
@@ -993,7 +992,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4512746454802970
 Transform:
@@ -1110,7 +1109,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 34
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4897304746637494
 Transform:
@@ -1123,7 +1122,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4902469174364494
 Transform:
@@ -1149,7 +1148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4979352207088870
 Transform:
@@ -1162,7 +1161,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4985901823724340
 Transform:
@@ -1175,7 +1174,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 4107542301545048}
-  m_RootOrder: 35
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4991728703177412
 Transform:
@@ -1652,24 +1651,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &95763785266907926
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1969602102933214}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114035065391055868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1683,6 +1664,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114080149758861676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1696,6 +1679,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114103073903405512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1709,6 +1694,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114142234706414886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1722,6 +1709,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114148232097415746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1735,6 +1724,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114151773148932714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1748,6 +1739,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114174114283295636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1761,6 +1754,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114181744516209854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1774,6 +1769,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114281965423987812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1787,6 +1784,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114291318693296682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1800,6 +1799,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114325745224575024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1813,6 +1814,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114341125658556110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1826,6 +1829,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114395319654282694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1839,6 +1844,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114395743232289438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1852,6 +1859,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114419274122669116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1865,6 +1874,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114453054892306474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1878,6 +1889,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114519485210080970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1891,6 +1904,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114545002489599324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1904,6 +1919,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114545060022148486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1917,6 +1934,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114563807840828704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1930,6 +1949,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114627815144591956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1943,6 +1964,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114647143090761066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1956,6 +1979,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114648992645193042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1969,6 +1994,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114655863077205090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1982,6 +2009,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114658521445859040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1995,6 +2024,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114672871140984206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2008,6 +2039,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114680304164083746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2021,6 +2054,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114721841048912978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2034,6 +2069,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114722760468624468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2047,6 +2084,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114754601966628732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2060,6 +2099,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114775348044994896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2073,6 +2114,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114804548883944596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2086,6 +2129,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114814697925313936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2116,6 +2161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114923931077968338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2129,6 +2176,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114944204129585800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2142,6 +2191,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114950835702619762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2155,6 +2206,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!114 &114953237940598246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2168,6 +2221,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
+  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
+    type: 2}
 --- !u!212 &212112783407225522
 SpriteRenderer:
   m_ObjectHideFlags: 1

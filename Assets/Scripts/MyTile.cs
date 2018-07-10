@@ -7,22 +7,26 @@ public class MyTile : MonoBehaviour
 {
     public GameObject[] TerrainTiles;
     public GameObject powerPlant;
+    public GameObject selectingSpace;
 
     private TurnFlowManager turnFlowManager;
     private BloomController bloomController;
     private Text controlTokenCounter;
+    private Animator anim;
+    private GameObject confirmCancel;
 
     // Use this for initialization
     void Start()
     {
+        confirmCancel = GameObject.Find("Confirm cancel base placement");
+        bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
+        controlTokenCounter = GameObject.Find("Control Token counter").GetComponentInChildren<Text>();
         turnFlowManager = GameObject.Find("Turn Flow Manager").GetComponent<TurnFlowManager>();
         Board board = GameObject.Find("Board").GetComponent<Board>();
         while (gameObject.transform.childCount < 1)
         {
             board.ChooseTile((Board.TerrainTilesEnum)Random.Range(0, 6), transform);
         }
-        bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
-        controlTokenCounter = GameObject.Find("Control Token counter").GetComponentInChildren<Text>();
     }
 
     // Update is called once per frame
@@ -31,9 +35,27 @@ public class MyTile : MonoBehaviour
 
     }
 
-    private void OnMouseOver()
+    private void OnMouseEnter()
     {
-        //play selection animation;
+        if (gameObject.tag != "Hazard" && turnFlowManager.playerBasePlaced == false && turnFlowManager.currentState == TurnFlowManager.State.firstRound)
+        {
+            gameObject.GetComponentInChildren<Animator>().Play("terrain minimise");
+            GameObject selectingBase = Instantiate(selectingSpace, transform.position, Quaternion.identity);
+            selectingBase.transform.parent = gameObject.transform;
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        if (gameObject.tag != "Hazard" && turnFlowManager.playerBasePlaced == false && turnFlowManager.currentState == TurnFlowManager.State.firstRound)
+        {
+            GameObject[] selectings = GameObject.FindGameObjectsWithTag("Selecting");
+            foreach (GameObject selecting in selectings)
+            {
+                Destroy(selecting);
+            }
+            gameObject.GetComponentInChildren<Animator>().Play("terrain maximise");
+        }
     }
 
     private void OnMouseDown()
@@ -42,8 +64,11 @@ public class MyTile : MonoBehaviour
         {
             GameObject newBase = Instantiate(powerPlant, transform.position, Quaternion.identity);
             newBase.transform.parent = gameObject.transform;
-            MinimiseTerrain();
-            turnFlowManager.playerBasePlaced = true;
+            GameObject[] selectings = GameObject.FindGameObjectsWithTag("Selecting");
+            foreach (GameObject selecting in selectings)
+            {
+                Destroy(selecting);
+            }
         }
         else if (turnFlowManager.currentState == TurnFlowManager.State.placeBloomAndCounters && bloomController.tokenPlaced == false && gameObject.tag == "Control Point")
         {
