@@ -1,16 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
     private BloomController bloomController;
     private TurnFlowManager turnFlowManager;
-    private GameObject confirmBaseButtons;
+    private Animator confirmBaseButtons;
 	// Use this for initialization
 	void Start ()
     {
-        confirmBaseButtons = GameObject.Find("Confirm cancel base placement");
+        confirmBaseButtons = GameObject.Find("Confirm cancel base placement").GetComponent<Animator>();
         bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
         turnFlowManager = GameObject.Find("Turn Flow Manager").GetComponent<TurnFlowManager>();
 	}
@@ -29,7 +30,7 @@ public class ButtonController : MonoBehaviour
     {
         turnFlowManager.playerBasePlaced = true;
         //make the next button clickable
-        //move yourself out of the way
+        confirmBaseButtons.Play("move out");//move yourself out of the way
     }
 
 }
