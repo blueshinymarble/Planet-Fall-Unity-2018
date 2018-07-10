@@ -7,36 +7,49 @@ public class BloomController : MonoBehaviour
 {
     public GameObject bloom;
     public int controlTokens;
+    public bool tokenPlaced;
 
     private Text controlCounterText;
 	// Use this for initialization
 	void Start ()
     {
-        controlTokens = Random.Range(3, 5);
+        controlTokens = 0;
+        tokenPlaced = false;
         controlCounterText = GameObject.Find("Control Token counter").GetComponentInChildren<Text>();
         controlCounterText.text = "Control Tokens: " + controlTokens;
     }
-    
+
+    private void Update()
+    {
+        Debug.Log("tokenPlaced bool is " + tokenPlaced);
+    }
+
     public void PlaceBloomToken()
     {
-        if (controlTokens == 0)
-        {
-            ChooseSpaceSpawnBloom();//place new blooms and place one token;
-            controlCounterText.text = "Control Tokens: " + controlTokens;//display control counters;
-        }
-        else
-        {
-            //place a control token;
-            //display control counters;
-        }
+        controlTokens--;
+        controlCounterText.text = "Control Tokens: " + controlTokens;
+        tokenPlaced = true;
     }
 
     public void ChooseSpaceSpawnBloom()
     {
+        if (controlTokens == 0)
+        {
+            controlTokens = Random.Range(3, 5);
+        }
+
+        controlCounterText.text = "Control Tokens: " + controlTokens;
+
         GameObject[] bloomPointsToDestroy = GameObject.FindGameObjectsWithTag("Bloom");
         foreach (GameObject toDestroy in bloomPointsToDestroy)
         {
             Destroy(toDestroy);
+        }
+
+        GameObject[] controlPoints = GameObject.FindGameObjectsWithTag("Control Point");
+        foreach(GameObject controlPointTile in controlPoints)
+        {
+            controlPointTile.tag = "Legal Space";
         }
 
         GameObject[] legalSpaces = GameObject.FindGameObjectsWithTag("Legal Space");

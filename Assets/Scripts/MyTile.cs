@@ -38,21 +38,20 @@ public class MyTile : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (gameObject.tag != "Hazard" && turnFlowManager.playerBasePlaced == false)
+        if (gameObject.tag != "Hazard" && turnFlowManager.playerBasePlaced == false && turnFlowManager.currentState == TurnFlowManager.State.firstRound)
         {
-            if (turnFlowManager.currentState == TurnFlowManager.State.firstRound)
-            {
-                GameObject newBase = Instantiate(powerPlant, transform.position, Quaternion.identity);
-                newBase.transform.parent = gameObject.transform;
-                MinimiseTerrain();
-                turnFlowManager.playerBasePlaced = true;
-            }
+            GameObject newBase = Instantiate(powerPlant, transform.position, Quaternion.identity);
+            newBase.transform.parent = gameObject.transform;
+            MinimiseTerrain();
+            turnFlowManager.playerBasePlaced = true;
         }
-        else if (turnFlowManager.currentState == TurnFlowManager.State.bloom)
+        else if (turnFlowManager.currentState == TurnFlowManager.State.placeBloomAndCounters && bloomController.tokenPlaced == false && gameObject.tag == "Control Point")
         {
-            gameObject.GetComponentInChildren<ControlPoint>().myControlTokens++;
-            bloomController.controlTokens--;
-            controlTokenCounter.text = "Control Tokens: " + bloomController.controlTokens;
+            bloomController.PlaceBloomToken();
+        }
+        else if (turnFlowManager.currentState == TurnFlowManager.State.placeCounters && bloomController.tokenPlaced == false && gameObject.tag == "Control Point")
+        {
+            bloomController.PlaceBloomToken();
         }
     }
 
