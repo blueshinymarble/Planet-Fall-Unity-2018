@@ -19,45 +19,40 @@ public class ButtonController : MonoBehaviour
         bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
         turnFlowManager = GameObject.Find("Turn Flow Manager").GetComponent<TurnFlowManager>();
 	}
-    
-    public void TestBloom()
-    {
-        bloomController.ChooseSpaceSpawnBloom();
-    }
 
-    public void Next()
+    public void Next() // when the end turn button is pressed it runs this method
     {
         turnFlowManager.ManageTurn();
     }
 
-    public void ConfirmBase()
+    public void ConfirmBase() // confirm the space chosen for player's base
     {
         endButtonAnim.SetBool("readyToContinue", true);//make the next button clickable
         confirmBaseButtons.anchoredPosition = new Vector3(-793, 540);//move yourself out of the way
     }
 
-    public void CancelBase()
+    public void CancelBase() // cancels the player's selection for their base
     {
         GameObject[] basesToDestroy = GameObject.FindGameObjectsWithTag("Just Placed Base");
-        foreach (GameObject placedBase in basesToDestroy)
+        foreach (GameObject placedBase in basesToDestroy) // destroys the instantiated base prefab
         {
             Destroy(placedBase);
         }
-        confirmBaseButtons.anchoredPosition = new Vector3(-793, 540);
-        endButtonAnim.SetBool("readyToContinue", false);
-        turnFlowManager.playerBasePlaced = false;
-        GameObject.FindGameObjectWithTag("Occupied").GetComponentInChildren<Animator>().Play("terrain maximise");
-        GameObject changeTag = GameObject.FindGameObjectWithTag("Occupied");
-        changeTag.tag = "Legal Space";
+        confirmBaseButtons.anchoredPosition = new Vector3(-793, 540); //moves the confirm cancel buttons out of the way
+        endButtonAnim.SetBool("readyToContinue", false); // makes sure the end turn button can't be pressed
+        turnFlowManager.playerBasePlaced = false; // this bool is necessary so that terrain minimise maximise animation doesnt play when the mouse is just hovering over a terrain
+        GameObject.FindGameObjectWithTag("Occupied").GetComponentInChildren<Animator>().Play("terrain maximise"); // plays terrain maximise animation to make the terrain reappear
+        GameObject changeTag = GameObject.FindGameObjectWithTag("Occupied"); //finds the tile that was clicked
+        changeTag.tag = "Legal Space"; // changes the clicked tiles tag back to legal so it can be used again
     }
 
-    public void ConfirmBloomPlacement()
+    public void ConfirmBloomPlacement() // confirm choice for control token
     {
         confirmBloomButtons.anchoredPosition = new Vector3(-793, 540);//move yourself out of the way
         endButtonAnim.SetBool("readyToContinue", true);
     }
 
-    public void CancelBloomPlacement()
+    public void CancelBloomPlacement() //cancel choice for control token
     {
         bloomController.RemoveBloomToken();
         confirmBloomButtons.anchoredPosition = new Vector3(-793, 540);//move yourself out of the way

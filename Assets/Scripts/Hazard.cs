@@ -8,11 +8,6 @@ public class Hazard : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        gameObject.transform.parent.tag = "Hazard";
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        gameObject.transform.parent.tag = "Hazard"; // changes the parent tile to hazard so it cannot be used for anything
 	}
 }

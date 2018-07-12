@@ -33,14 +33,8 @@ public class TurnFlowManager : MonoBehaviour
         bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
         generalAnnouncer.text = "Beginning of round";
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        Debug.Log(currentState);
-	}
 
-    public void ManageTurn()
+    public void ManageTurn() // manages the turn 
     {
         switch (currentState)
         {
@@ -63,18 +57,6 @@ public class TurnFlowManager : MonoBehaviour
                     bloomController.ChooseSpaceSpawnBloom();
                     generalAnnouncer.text = "Click a control space to place a control counter"; //TODO
                 }
-
-                /*if (bloomController.controlTokens != 0)
-                {
-                    generalAnnouncer.text = "Click a control space to place a control counter";
-                    currentState = State.bloom;
-                }
-                else
-                {
-                    currentState = State.bloomPlacingRound;
-                    bloomController.ChooseSpaceSpawnBloom();
-                    generalAnnouncer.text = "Click a control space to place a control counter";
-                }*/
                 break;
 
             case State.placeCounters:
@@ -124,21 +106,6 @@ public class TurnFlowManager : MonoBehaviour
                     currentState = State.roundBegins;
                     generalAnnouncer.text = "Next turn";
                 }
-                /*currentRoundInt++;
-                roundAnnouncer.GetComponentInChildren<Text>().text = "Round " + currentRoundInt;
-
-                if (currentRoundInt == 9)
-                {
-                    generalAnnouncer.text = "Scoring round begins";
-                    roundAnnouncer.GetComponentInChildren<Text>().text = "Scoring Round";
-                    currentState = State.scoring;
-                }
-                else
-                {
-                    roundAnnouncer.GetComponentInChildren<Text>().text = "Round " + currentRoundInt;
-                    currentState = State.roundBegins;
-                    generalAnnouncer.text = "Next round begins";
-                }*/
                 break;
         }
     }

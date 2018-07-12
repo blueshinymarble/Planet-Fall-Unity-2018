@@ -8,12 +8,7 @@ public class Building : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        gameObject.transform.parent.tag = "Occupied";
+        gameObject.transform.parent.tag = "Occupied"; // changes the tag of the parent tile of this terrain to occupied so it cannot be used to spawn control points
 	}
 	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 }

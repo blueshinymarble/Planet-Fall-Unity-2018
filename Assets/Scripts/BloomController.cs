@@ -19,41 +19,36 @@ public class BloomController : MonoBehaviour
         controlCounterText.text = "Control Tokens: " + controlTokens;
     }
 
-    private void Update()
-    {
-        Debug.Log("tokenPlaced bool is " + tokenPlaced);
-    }
-
-    public void PlaceBloomToken()
+    public void PlaceBloomToken() //updates the control token count, updates the control counter text and changes the token placed bool that the end turn button depends on
     {
         controlTokens--;
         controlCounterText.text = "Control Tokens: " + controlTokens;
         tokenPlaced = true;
     }
 
-    public void RemoveBloomToken()
+    public void RemoveBloomToken() // does the opposite of the place bloom method
     {
         controlTokens++;
         controlCounterText.text = "Control Tokens: " + controlTokens;
         tokenPlaced = false;
     }
 
-    public void ChooseSpaceSpawnBloom()
+    public void ChooseSpaceSpawnBloom() // chooses a random number of spaces and spawns control points there.
     {
-        if (controlTokens == 0)
+        if (controlTokens == 0) // chooses a random number of control tokens 
         {
             controlTokens = Random.Range(3, 5);
         }
 
         controlCounterText.text = "Control Tokens: " + controlTokens;
 
-        GameObject[] bloomPointsToDestroy = GameObject.FindGameObjectsWithTag("Bloom");
+        GameObject[] bloomPointsToDestroy = GameObject.FindGameObjectsWithTag("Bloom"); // destroy all the previous control points before spawning new ones
         foreach (GameObject toDestroy in bloomPointsToDestroy)
         {
             Destroy(toDestroy);
         }
 
-        GameObject[] controlPoints = GameObject.FindGameObjectsWithTag("Control Point");
+        GameObject[] controlPoints = GameObject.FindGameObjectsWithTag("Control Point"); // finds all of the legal spaces and chooses random spaces from these to spawn control points
         foreach(GameObject controlPointTile in controlPoints)
         {
             controlPointTile.tag = "Legal Space";

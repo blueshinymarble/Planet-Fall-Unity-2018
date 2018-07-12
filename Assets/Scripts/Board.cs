@@ -23,11 +23,10 @@ public class Board : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        //myAnim = GetComponent<Animator>();
-        //myAnim.Play("board spawning tiles");
+
 	}
 	
-	public void ChooseTile(TerrainTilesEnum tile, Transform child)
+	public void ChooseTile(TerrainTilesEnum tile, Transform child) // keeps a count of each terrain type and spawns terrain according to how many of that terain type is left. This method is called by each tile 
     {
         switch (tile)
         {
