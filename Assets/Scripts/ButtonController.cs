@@ -7,11 +7,11 @@ public class ButtonController : MonoBehaviour
 {
     private BloomController bloomController;
     private TurnFlowManager turnFlowManager;
-    private Animator confirmBaseButtons;
+    private RectTransform confirmBaseButtons;
 	// Use this for initialization
 	void Start ()
     {
-        confirmBaseButtons = GameObject.Find("Confirm panel").GetComponent<Animator>();
+        confirmBaseButtons = GameObject.Find("Confirm panel").GetComponent<RectTransform>();
         bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
         turnFlowManager = GameObject.Find("Turn Flow Manager").GetComponent<TurnFlowManager>();
 	}
@@ -28,9 +28,12 @@ public class ButtonController : MonoBehaviour
 
     public void ConfirmBase()
     {
-        turnFlowManager.playerBasePlaced = true;
         //make the next button clickable
-        confirmBaseButtons.Play("move out");//move yourself out of the way
+        confirmBaseButtons.anchoredPosition = new Vector3(-793, 540);//move yourself out of the way
     }
 
+    public void CancelBase()
+    {
+        
+    }
 }

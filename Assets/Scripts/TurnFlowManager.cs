@@ -11,14 +11,19 @@ public class TurnFlowManager : MonoBehaviour
     public bool firstRound;
     public int currentRoundInt;
     public bool playerBasePlaced;
+    public bool readyToContinue;
 
     private GameObject roundAnnouncer;
     private Text generalAnnouncer;
     private BloomController bloomController;
+    private Animator endButtonAnim;
 
 	// Use this for initialization
 	void Start ()
     {
+        readyToContinue = true;
+        endButtonAnim = GameObject.Find("End Button").GetComponent<Animator>();
+        endButtonAnim.Play("end turn");
         playerBasePlaced = false;
         roundAnnouncer = GameObject.Find("Round counter");
         currentRoundInt = 0;
@@ -40,6 +45,7 @@ public class TurnFlowManager : MonoBehaviour
         switch (currentState)
         {
             case State.roundBegins:
+                endButtonAnim.SetBool("readyToContinue", false);
                 if (firstRound)
                 {
                     currentState = State.firstRound;

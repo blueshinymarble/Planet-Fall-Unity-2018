@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\EndButton.cs" />
     <Compile Include="Assets\Scripts\Hazard.cs" />
     <Compile Include="Assets\Scripts\MyTile.cs" />
+    <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\TurnFlowManager.cs" />
     <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
     <None Include="Assets\Simple UI\Fonts\OFL.txt" />
