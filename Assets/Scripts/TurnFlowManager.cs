@@ -100,6 +100,7 @@ public class TurnFlowManager : MonoBehaviour
             case State.firstRound:
                 if (playerBasePlaced == true)
                 {
+                    endButtonAnim.SetBool("readyToContinue", false);
                     currentState = State.placeBloomAndCounters;
                     generalAnnouncer.text = "Click a control space to place a control counter";
                     bloomController.tokenPlaced = false;

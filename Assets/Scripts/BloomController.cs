@@ -31,6 +31,13 @@ public class BloomController : MonoBehaviour
         tokenPlaced = true;
     }
 
+    public void RemoveBloomToken()
+    {
+        controlTokens++;
+        controlCounterText.text = "Control Tokens: " + controlTokens;
+        tokenPlaced = false;
+    }
+
     public void ChooseSpaceSpawnBloom()
     {
         if (controlTokens == 0)

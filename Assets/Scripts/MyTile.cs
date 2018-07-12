@@ -15,11 +15,13 @@ public class MyTile : MonoBehaviour
     private Text controlTokenCounter;
     private Animator anim;
     private RectTransform confirmCancel;
+    private RectTransform confirmCancelBloom;
 
     // Use this for initialization
     void Start()
     {
         confirmCancel = GameObject.Find("Confirm panel").GetComponent<RectTransform>();
+        confirmCancelBloom = GameObject.Find("Confirm bloom placement panel").GetComponent<RectTransform>();
         bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
         controlTokenCounter = GameObject.Find("Control Token counter").GetComponentInChildren<Text>();
         turnFlowManager = GameObject.Find("Turn Flow Manager").GetComponent<TurnFlowManager>();
@@ -28,12 +30,6 @@ public class MyTile : MonoBehaviour
         {
             board.ChooseTile((Board.TerrainTilesEnum)Random.Range(0, 6), transform);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void OnMouseEnter()
@@ -71,15 +67,18 @@ public class MyTile : MonoBehaviour
             {
                 Destroy(selecting);
             }
+            gameObject.GetComponentInChildren<Animator>().Play("terrain minimise");
             confirmCancel.anchoredPosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0);
         }
         else if (turnFlowManager.currentState == TurnFlowManager.State.placeBloomAndCounters && bloomController.tokenPlaced == false && gameObject.tag == "Control Point")
         {
             bloomController.PlaceBloomToken();
+            confirmCancelBloom.anchoredPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
         }
         else if (turnFlowManager.currentState == TurnFlowManager.State.placeCounters && bloomController.tokenPlaced == false && gameObject.tag == "Control Point")
         {
-            bloomController.PlaceBloomToken();
+            bloomController.controlTokens--;
+            confirmCancelBloom.anchoredPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
         }
     }
 
