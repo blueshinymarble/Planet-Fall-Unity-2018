@@ -28,7 +28,6 @@ public class BloomController : MonoBehaviour
 
     public void RemoveBloomToken() // does the opposite of the place bloom method
     {
-        controlTokens++;
         controlCounterText.text = "Control Tokens: " + controlTokens;
         tokenPlaced = false;
     }

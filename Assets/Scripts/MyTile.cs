@@ -72,12 +72,10 @@ public class MyTile : MonoBehaviour
         }
         else if (turnFlowManager.currentState == TurnFlowManager.State.placeBloomAndCounters && bloomController.tokenPlaced == false && gameObject.tag == "Control Point")
         { // if its the place bloom and counters phase it lets the player choose this space to place a control token
-            bloomController.PlaceBloomToken();
             confirmCancelBloom.anchoredPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
         }
         else if (turnFlowManager.currentState == TurnFlowManager.State.placeCounters && bloomController.tokenPlaced == false && gameObject.tag == "Control Point")
         { // if its the placec counters phase ibasically does the same thing as the place bloom and counters phase
-            bloomController.controlTokens--;
             confirmCancelBloom.anchoredPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
         }
     }

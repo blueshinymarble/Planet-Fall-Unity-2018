@@ -39,8 +39,8 @@ public class TurnFlowManager : MonoBehaviour
         switch (currentState)
         {
             case State.roundBegins:
-                endButtonAnim.SetBool("readyToContinue", false);
-                if (firstRound)
+                endButtonAnim.SetBool("readyToContinue", false); // sets whether the continue button nis ready or not
+                if (firstRound) 
                 {
                     currentState = State.firstRound;
                     generalAnnouncer.text = "Click a valid space (not a hazard or another player's base) to place your base";

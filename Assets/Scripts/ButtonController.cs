@@ -48,6 +48,7 @@ public class ButtonController : MonoBehaviour
 
     public void ConfirmBloomPlacement() // confirm choice for control token
     {
+        bloomController.PlaceBloomToken();
         confirmBloomButtons.anchoredPosition = new Vector3(-793, 540);//move yourself out of the way
         endButtonAnim.SetBool("readyToContinue", true);
     }

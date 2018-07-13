@@ -1564,7 +1564,6 @@ GameObject:
   - component: {fileID: 937715718}
   - component: {fileID: 937715717}
   - component: {fileID: 937715716}
-  - component: {fileID: 937715719}
   - component: {fileID: 937715720}
   m_Layer: 5
   m_Name: End Button
@@ -1619,9 +1618,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: e2d540f6f9e25c54784e7828d0eeef3e,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: b8aebc6d300a01c4084d25a6c1c645b1, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 002be61bf53b26f40a055f05e9b4e4cd, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1678,18 +1678,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 937715714}
---- !u!114 &937715719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 937715714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c32c6d768460504bab6765beeabb115, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  board: {fileID: 0}
 --- !u!95 &937715720
 Animator:
   serializedVersion: 3
