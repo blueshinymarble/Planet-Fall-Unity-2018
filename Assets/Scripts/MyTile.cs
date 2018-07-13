@@ -8,6 +8,7 @@ public class MyTile : MonoBehaviour
     public GameObject[] TerrainTiles;
     public GameObject powerPlant;
     public GameObject selectingSpace;
+    public GameObject selectShip;
     public Camera cam;
 
     private TurnFlowManager turnFlowManager;
@@ -16,10 +17,12 @@ public class MyTile : MonoBehaviour
     private Animator anim;
     private RectTransform confirmCancel;
     private RectTransform confirmCancelBloom;
+    private ButtonController myButtonController;
 
     // Use this for initialization
     void Start()
     {
+        myButtonController = GameObject.Find("Button Controller").GetComponent<ButtonController>();
         confirmCancel = GameObject.Find("Confirm panel").GetComponent<RectTransform>();
         confirmCancelBloom = GameObject.Find("Confirm bloom placement panel").GetComponent<RectTransform>();
         bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
@@ -40,18 +43,24 @@ public class MyTile : MonoBehaviour
             GameObject selectingBase = Instantiate(selectingSpace, transform.position, Quaternion.identity);
             selectingBase.transform.parent = gameObject.transform;
         }
+        else if (gameObject.tag!= "Hazard" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true)
+        {
+            GameObject selectingShip = Instantiate(selectShip, new Vector3(transform.position.x, 5.27f, transform.position.z), Quaternion.identity);
+            selectingShip.transform.parent = gameObject.transform;
+            Debug.Log("im here");
+        }
     }
 
     private void OnMouseExit() 
     {
         if (gameObject.tag != "Hazard" && turnFlowManager.playerBasePlaced == false && turnFlowManager.currentState == TurnFlowManager.State.firstRound) // when the mouse leaves the tile it destroys the green selectable base that was used to illustrate that a base could be spawned here and brings back the terrain of the tile
         {
-            GameObject[] selectings = GameObject.FindGameObjectsWithTag("Selecting");
-            foreach (GameObject selecting in selectings)
-            {
-                Destroy(selecting);
-            }
+            DestroySelecting("Selecting");
             gameObject.GetComponentInChildren<Animator>().Play("terrain maximise");
+        }
+        else if (gameObject.tag != "Hazard" && turnFlowManager.currentState == TurnFlowManager.State.action)
+        {
+            DestroySelecting("Selecting");
         }
     }
 
@@ -70,14 +79,10 @@ public class MyTile : MonoBehaviour
             gameObject.GetComponentInChildren<Animator>().Play("terrain minimise");
             confirmCancel.anchoredPosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0);
         }
-        /*else if (turnFlowManager.currentState == TurnFlowManager.State.placeBloomAndCounters && bloomController.tokenPlaced == false && gameObject.tag == "Control Point")
-        { // if its the place bloom and counters phase it lets the player choose this space to place a control token
-            confirmCancelBloom.anchoredPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+        else if (gameObject.tag!= "Hazard" && turnFlowManager.currentState == TurnFlowManager.State.action)
+        {
+            
         }
-        else if (turnFlowManager.currentState == TurnFlowManager.State.placeCounters && bloomController.tokenPlaced == false && gameObject.tag == "Control Point")
-        { // if its the place counters phase basically does the same thing as the place bloom and counters phase
-            confirmCancelBloom.anchoredPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
-        }*/
     }
 
     void MinimiseTerrain() // method that was written to combat a bug that occured when a base was placed and cancelled but the mouse was already hovering on a tile and base placed the tile wouldnt play the minimise animation
@@ -89,4 +94,12 @@ public class MyTile : MonoBehaviour
         }
     }
 
+    void DestroySelecting(string name)
+    {
+        GameObject[] selectings = GameObject.FindGameObjectsWithTag(name);
+        foreach (GameObject selecting in selectings)
+        {
+            Destroy(selecting);
+        }
+    }
 }

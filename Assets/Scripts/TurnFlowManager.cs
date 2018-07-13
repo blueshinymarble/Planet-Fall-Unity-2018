@@ -63,43 +63,12 @@ public class TurnFlowManager : MonoBehaviour
                     currentState = State.action;
                     generalAnnouncer.text = "Actions";
                 }
-                /*else if (firstRound == false && bloomController.controlTokens > 0 && currentRoundInt < 9)
-                {
-                    currentState = State.placeCounters;
-                    generalAnnouncer.text = "Click a control space to place a control counter";
-                }
-                else if (firstRound == false && bloomController.controlTokens == 0 && currentRoundInt < 9)
-                {
-                    currentState = State.placeBloomAndCounters;
-                    bloomController.ChooseSpaceSpawnBloom();
-                    generalAnnouncer.text = "Click a control space to place a control counter"; //TODO
-                }*/
                 break;
 
             case State.controlPoints:
                 currentState = State.action;
                 generalAnnouncer.text = "Action phase";
                 break;
-
-            /*case State.placeCounters:
-                if (bloomController.tokenPlaced == true)
-                {
-                    currentState = State.action;
-                    generalAnnouncer.text = "Action phase";
-                    bloomController.tokenPlaced = false;
-                }
-                break;
-
-            case State.placeBloomAndCounters:
-                if (bloomController.tokenPlaced == true)
-                {
-                    currentState = State.action;
-                    generalAnnouncer.text = "Action phase";
-                    bloomController.tokenPlaced = false;
-                    currentRoundInt++;
-                    roundAnnouncer.GetComponentInChildren<Text>().text = "Round " + currentRoundInt;
-                }
-                break;*/
 
             case State.firstRound:
                 if (playerBasePlaced == true)
@@ -109,10 +78,6 @@ public class TurnFlowManager : MonoBehaviour
                     currentState = State.controlPoints;
                     bloomController.LegalSpaceControl();
                     bloomController.SpawnControlPoints();
-                    //currentState = State.placeBloomAndCounters;
-                    //generalAnnouncer.text = "Click a control space to place a control counter";
-                    //bloomController.tokenPlaced = false;
-                    //bloomController.ChooseSpaceSpawnBloom();
                 }
                 break;
 

@@ -5,14 +5,18 @@ using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
+    public bool shipSelected;
+
     private BloomController bloomController;
     private TurnFlowManager turnFlowManager;
     private RectTransform confirmBaseButtons;
     private RectTransform confirmBloomButtons;
     private Animator endButtonAnim;
+
 	// Use this for initialization
 	void Start ()
     {
+        shipSelected = false;
         endButtonAnim = GameObject.Find("End Button").GetComponent<Animator>();
         confirmBaseButtons = GameObject.Find("Confirm panel").GetComponent<RectTransform>();
         confirmBloomButtons = GameObject.Find("Confirm bloom placement panel").GetComponent<RectTransform>();
@@ -57,5 +61,10 @@ public class ButtonController : MonoBehaviour
     {
         bloomController.RemoveBloomToken();
         confirmBloomButtons.anchoredPosition = new Vector3(-793, 540);//move yourself out of the way
+    }
+
+    public void SelectShip()
+    {
+        shipSelected = true;
     }
 }
