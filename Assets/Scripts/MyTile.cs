@@ -70,14 +70,14 @@ public class MyTile : MonoBehaviour
             gameObject.GetComponentInChildren<Animator>().Play("terrain minimise");
             confirmCancel.anchoredPosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0);
         }
-        else if (turnFlowManager.currentState == TurnFlowManager.State.placeBloomAndCounters && bloomController.tokenPlaced == false && gameObject.tag == "Control Point")
+        /*else if (turnFlowManager.currentState == TurnFlowManager.State.placeBloomAndCounters && bloomController.tokenPlaced == false && gameObject.tag == "Control Point")
         { // if its the place bloom and counters phase it lets the player choose this space to place a control token
             confirmCancelBloom.anchoredPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
         }
         else if (turnFlowManager.currentState == TurnFlowManager.State.placeCounters && bloomController.tokenPlaced == false && gameObject.tag == "Control Point")
-        { // if its the placec counters phase ibasically does the same thing as the place bloom and counters phase
+        { // if its the place counters phase basically does the same thing as the place bloom and counters phase
             confirmCancelBloom.anchoredPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
-        }
+        }*/
     }
 
     void MinimiseTerrain() // method that was written to combat a bug that occured when a base was placed and cancelled but the mouse was already hovering on a tile and base placed the tile wouldnt play the minimise animation

@@ -32,7 +32,7 @@ public class BloomController : MonoBehaviour
         tokenPlaced = false;
     }
 
-    public void ChooseSpaceSpawnBloom() // chooses a random number of spaces and spawns control points there.
+    /*public void ChooseSpaceSpawnBloom() // chooses a random number of spaces and spawns control points there.
     {
         if (controlTokens == 0) // chooses a random number of control tokens 
         {
@@ -53,6 +53,38 @@ public class BloomController : MonoBehaviour
             controlPointTile.tag = "Legal Space";
         }
 
+        GameObject[] legalSpaces = GameObject.FindGameObjectsWithTag("Legal Space");
+        for (int i = 0; i < Random.Range(1, 4); i++)
+        {
+            GameObject randomSpace = legalSpaces[Random.Range(0, legalSpaces.Length)];
+            GameObject SpawnBloom = Instantiate(bloom, randomSpace.transform.position, Quaternion.identity);
+            SpawnBloom.transform.parent = randomSpace.transform;
+        }
+    }*/
+
+    void TokenGenerator()
+    {
+        controlTokens = Random.Range(3, 5);
+    }
+
+    public void LegalSpaceControl() // destroy previous control points and change the tags of the spaces they occupied back to legal spaces
+    {
+        GameObject[] bloomPointsToDestroy = GameObject.FindGameObjectsWithTag("Bloom"); // destroy all the previous control points before spawning new ones
+        foreach (GameObject toDestroy in bloomPointsToDestroy)
+        {
+            Destroy(toDestroy);
+        }
+
+        GameObject[] controlPoints = GameObject.FindGameObjectsWithTag("Control Point"); // finds all of the legal spaces and chooses random spaces from these to spawn control points
+        foreach (GameObject controlPointTile in controlPoints)
+        {
+            controlPointTile.tag = "Legal Space";
+        }
+    }
+
+    public void SpawnControlPoints() // finds legal spaces and spawn control points on those spaces and fill those control points with control tokens
+    {
+        TokenGenerator();
         GameObject[] legalSpaces = GameObject.FindGameObjectsWithTag("Legal Space");
         for (int i = 0; i < Random.Range(1, 4); i++)
         {

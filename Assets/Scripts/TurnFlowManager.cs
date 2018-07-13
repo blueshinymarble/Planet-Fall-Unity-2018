@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class TurnFlowManager : MonoBehaviour
 {
 
-    public enum State {firstRound, roundBegins, bloom, action, scoring, placeBloomAndCounters, placeCounters, finalScoring}
+    public enum State {firstRound, roundBegins, bloom, action, scoring, placeBloomAndCounters, placeCounters, finalScoring, controlPoints}
     public State currentState;
     public bool firstRound;
     public int currentRoundInt;
     public bool playerBasePlaced;
     public bool readyToContinue;
+    public int controlPointCount;
 
     private GameObject roundAnnouncer;
     private Text generalAnnouncer;
@@ -35,18 +36,34 @@ public class TurnFlowManager : MonoBehaviour
 	}
 
     public void ManageTurn() // manages the turn 
-    {
+    { // bloom state needs to place the control points and then the maximum amount of tokens on those points from the get go
         switch (currentState)
         {
             case State.roundBegins:
+                GameObject[] controlPointTiles = GameObject.FindGameObjectsWithTag("Control Point");
+                controlPointCount = controlPointTiles.Length;
                 endButtonAnim.SetBool("readyToContinue", false); // sets whether the continue button nis ready or not
-                if (firstRound) 
+                if (firstRound)
                 {
                     currentState = State.firstRound;
                     generalAnnouncer.text = "Click a valid space (not a hazard or another player's base) to place your base";
                     firstRound = false;
                 }
-                else if (firstRound == false && bloomController.controlTokens > 0 && currentRoundInt < 9)
+                else if (controlPointCount == 0)
+                {
+                    currentState = State.controlPoints;
+                    generalAnnouncer.text = "Control Points set";
+                    endButtonAnim.SetBool("readyToContinue", false);
+                    bloomController.LegalSpaceControl();
+                    bloomController.SpawnControlPoints();
+                    currentState = State.action;
+                }
+                else
+                {
+                    currentState = State.action;
+                    generalAnnouncer.text = "Actions";
+                }
+                /*else if (firstRound == false && bloomController.controlTokens > 0 && currentRoundInt < 9)
                 {
                     currentState = State.placeCounters;
                     generalAnnouncer.text = "Click a control space to place a control counter";
@@ -56,10 +73,15 @@ public class TurnFlowManager : MonoBehaviour
                     currentState = State.placeBloomAndCounters;
                     bloomController.ChooseSpaceSpawnBloom();
                     generalAnnouncer.text = "Click a control space to place a control counter"; //TODO
-                }
+                }*/
                 break;
 
-            case State.placeCounters:
+            case State.controlPoints:
+                currentState = State.action;
+                generalAnnouncer.text = "Action phase";
+                break;
+
+            /*case State.placeCounters:
                 if (bloomController.tokenPlaced == true)
                 {
                     currentState = State.action;
@@ -77,16 +99,20 @@ public class TurnFlowManager : MonoBehaviour
                     currentRoundInt++;
                     roundAnnouncer.GetComponentInChildren<Text>().text = "Round " + currentRoundInt;
                 }
-                break;
+                break;*/
 
             case State.firstRound:
                 if (playerBasePlaced == true)
                 {
+                    generalAnnouncer.text = "Control Points set";
                     endButtonAnim.SetBool("readyToContinue", false);
-                    currentState = State.placeBloomAndCounters;
-                    generalAnnouncer.text = "Click a control space to place a control counter";
-                    bloomController.tokenPlaced = false;
-                    bloomController.ChooseSpaceSpawnBloom();
+                    currentState = State.controlPoints;
+                    bloomController.LegalSpaceControl();
+                    bloomController.SpawnControlPoints();
+                    //currentState = State.placeBloomAndCounters;
+                    //generalAnnouncer.text = "Click a control space to place a control counter";
+                    //bloomController.tokenPlaced = false;
+                    //bloomController.ChooseSpaceSpawnBloom();
                 }
                 break;
 
