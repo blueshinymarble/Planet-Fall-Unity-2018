@@ -45,9 +45,8 @@ public class MyTile : MonoBehaviour
         }
         else if (gameObject.tag!= "Hazard" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true)
         {
-            GameObject selectingShip = Instantiate(selectShip, new Vector3(transform.position.x, 5.27f, transform.position.z), Quaternion.identity);
+            GameObject selectingShip = Instantiate(selectShip, new Vector3(transform.position.x, 6f, transform.position.z), Quaternion.identity);
             selectingShip.transform.parent = gameObject.transform;
-            Debug.Log("im here");
         }
     }
 
