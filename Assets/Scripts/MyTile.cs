@@ -39,9 +39,7 @@ public class MyTile : MonoBehaviour
     {
         if (gameObject.tag != "Hazard" && turnFlowManager.playerBasePlaced == false && turnFlowManager.currentState == TurnFlowManager.State.firstRound) // when the mouse hovers the tile during the first round of the game the terrain of that tile shrinks to show it is a possible spawn location for the player's base
         {
-            gameObject.GetComponentInChildren<Animator>().Play("terrain minimise");
-            GameObject selecting = Instantiate(selector, transform.position, Quaternion.identity);
-            selecting.transform.parent = gameObject.transform;
+            GameObject selecting = Instantiate(selector, gameObject.transform.position, Quaternion.identity);
         }
         else if (gameObject.tag!= "Hazard" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true)
         {
@@ -55,7 +53,6 @@ public class MyTile : MonoBehaviour
         if (gameObject.tag != "Hazard" && turnFlowManager.playerBasePlaced == false && turnFlowManager.currentState == TurnFlowManager.State.firstRound) // when the mouse leaves the tile it destroys the green selectable base that was used to illustrate that a base could be spawned here and brings back the terrain of the tile
         {
             DestroySelecting("Selecting");
-            gameObject.GetComponentInChildren<Animator>().Play("terrain maximise");
         }
         else if (gameObject.tag != "Hazard" && turnFlowManager.currentState == TurnFlowManager.State.action)
         {
@@ -67,6 +64,7 @@ public class MyTile : MonoBehaviour
     {
         if (gameObject.tag != "Hazard" && turnFlowManager.playerBasePlaced == false && turnFlowManager.currentState == TurnFlowManager.State.firstRound)
         { // if its the first round it spawns in the player's base and brings in the confrim and cancel buttons
+            gameObject.GetComponentInChildren<Animator>().Play("terrain minimise");
             turnFlowManager.playerBasePlaced = true;
             GameObject newBase = Instantiate(powerPlant, transform.position, Quaternion.identity);
             newBase.transform.parent = gameObject.transform;
