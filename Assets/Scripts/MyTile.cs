@@ -8,7 +8,7 @@ public class MyTile : MonoBehaviour
     public GameObject[] TerrainTiles;
     public GameObject powerPlant;
     public GameObject selectingSpace;
-    public GameObject selectShip;
+    public GameObject selector;
     public Camera cam;
 
     private TurnFlowManager turnFlowManager;
@@ -40,13 +40,13 @@ public class MyTile : MonoBehaviour
         if (gameObject.tag != "Hazard" && turnFlowManager.playerBasePlaced == false && turnFlowManager.currentState == TurnFlowManager.State.firstRound) // when the mouse hovers the tile during the first round of the game the terrain of that tile shrinks to show it is a possible spawn location for the player's base
         {
             gameObject.GetComponentInChildren<Animator>().Play("terrain minimise");
-            GameObject selectingBase = Instantiate(selectingSpace, transform.position, Quaternion.identity);
-            selectingBase.transform.parent = gameObject.transform;
+            GameObject selecting = Instantiate(selector, transform.position, Quaternion.identity);
+            selecting.transform.parent = gameObject.transform;
         }
         else if (gameObject.tag!= "Hazard" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true)
         {
-            GameObject selectingShip = Instantiate(selectShip, new Vector3(transform.position.x, 6f, transform.position.z), Quaternion.identity);
-            selectingShip.transform.parent = gameObject.transform;
+            GameObject selecting = Instantiate(selector, new Vector3(transform.position.x, 6f, transform.position.z), Quaternion.identity);
+            selecting.transform.parent = gameObject.transform;
         }
     }
 
