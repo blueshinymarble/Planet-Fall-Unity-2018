@@ -65,6 +65,14 @@ public class ButtonController : MonoBehaviour
 
     public void SelectShip()
     {
-        shipSelected = true;
+        if (turnFlowManager.currentState == TurnFlowManager.State.action && shipSelected == false)
+        {
+            shipSelected = true;
+        }
+        else
+        {
+            shipSelected = false;
+        }
+        Debug.Log(shipSelected);
     }
 }

@@ -10,6 +10,8 @@ public class MyTile : MonoBehaviour
     public GameObject selectingSpace;
     public GameObject selector;
     public Camera cam;
+    public GameObject shipSelector;
+    public GameObject prefabShip;
 
     private TurnFlowManager turnFlowManager;
     private BloomController bloomController;
@@ -41,9 +43,9 @@ public class MyTile : MonoBehaviour
         {
             GameObject selecting = Instantiate(selector, gameObject.transform.position, Quaternion.identity);
         }
-        else if (gameObject.tag!= "Hazard" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true)
+        else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true)
         {
-            GameObject selecting = Instantiate(selector, new Vector3(transform.position.x, 6f, transform.position.z), Quaternion.identity);
+            GameObject selecting = Instantiate(shipSelector, new Vector3(transform.position.x, 6f, transform.position.z), Quaternion.identity);
             selecting.transform.parent = gameObject.transform;
         }
     }
@@ -68,17 +70,17 @@ public class MyTile : MonoBehaviour
             turnFlowManager.playerBasePlaced = true;
             GameObject newBase = Instantiate(powerPlant, transform.position, Quaternion.identity);
             newBase.transform.parent = gameObject.transform;
-            GameObject[] selectings = GameObject.FindGameObjectsWithTag("Selecting");
-            foreach (GameObject selecting in selectings)
-            {
-                Destroy(selecting);
-            }
+            DestroySelecting("Selecting");
             gameObject.GetComponentInChildren<Animator>().Play("terrain minimise");
             confirmCancel.anchoredPosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0);
         }
-        else if (gameObject.tag!= "Hazard" && turnFlowManager.currentState == TurnFlowManager.State.action)
+        else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true)
         {
-            
+            GameObject newShip = Instantiate(prefabShip, transform.position, Quaternion.identity);
+            newShip.transform.parent = gameObject.transform;
+            myButtonController.shipSelected = false;
+            DestroySelecting("Selecting");
+
         }
     }
 
