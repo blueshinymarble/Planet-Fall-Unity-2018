@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ButtonController : MonoBehaviour
 {
     public bool shipSelected;
+    public bool turretSelected;
 
     private BloomController bloomController;
     private TurnFlowManager turnFlowManager;
@@ -17,6 +18,7 @@ public class ButtonController : MonoBehaviour
 	void Start ()
     {
         shipSelected = false;
+        turretSelected = false;
         endButtonAnim = GameObject.Find("End Button").GetComponent<Animator>();
         confirmBaseButtons = GameObject.Find("Confirm panel").GetComponent<RectTransform>();
         confirmBloomButtons = GameObject.Find("Confirm bloom placement panel").GetComponent<RectTransform>();
@@ -26,7 +28,11 @@ public class ButtonController : MonoBehaviour
 
     public void Next() // when the end turn button is pressed it runs this method
     {
-        turnFlowManager.ManageTurn();
+        if (endButtonAnim.GetBool("readyToContinue") == true)
+        {
+            turnFlowManager.ManageTurn();
+        }
+
     }
 
     public void ConfirmBase() // confirm the space chosen for player's base
@@ -73,6 +79,26 @@ public class ButtonController : MonoBehaviour
         {
             shipSelected = false;
         }
-        Debug.Log(shipSelected);
+    }
+
+    public void SelectTurret()
+    {
+        if (turnFlowManager.currentState == TurnFlowManager.State.action && turretSelected == false)
+        {
+            turretSelected = true;
+        }
+        else
+        {
+            turretSelected = false;
+        }
+    }
+
+    public void Rotate()
+    {
+        GameObject[] toRotate = GameObject.FindGameObjectsWithTag("Just Placed");
+        foreach (GameObject obj in toRotate)
+        {
+            
+        }
     }
 }

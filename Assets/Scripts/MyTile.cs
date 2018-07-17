@@ -11,7 +11,9 @@ public class MyTile : MonoBehaviour
     public GameObject selector;
     public Camera cam;
     public GameObject shipSelector;
+    public GameObject turretSelector;
     public GameObject prefabShip;
+    public GameObject prefabTurret;
 
     private TurnFlowManager turnFlowManager;
     private BloomController bloomController;
@@ -45,8 +47,12 @@ public class MyTile : MonoBehaviour
         }
         else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true)
         {
-            GameObject selecting = Instantiate(shipSelector, new Vector3(transform.position.x, 6f, transform.position.z), Quaternion.identity);
-            selecting.transform.parent = gameObject.transform;
+            GameObject selectingShip = Instantiate(shipSelector, new Vector3(transform.position.x, 6f, transform.position.z), Quaternion.identity);
+            selectingShip.transform.parent = gameObject.transform;
+        }
+        else if (gameObject.tag== "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.turretSelected == true)
+        {
+              GameObject selecting = Instantiate(selector, gameObject.transform.position, Quaternion.identity);
         }
     }
 
@@ -74,13 +80,22 @@ public class MyTile : MonoBehaviour
             gameObject.GetComponentInChildren<Animator>().Play("terrain minimise");
             confirmCancel.anchoredPosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0);
         }
-        else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true)
+        else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true) // placing a ship on the space
         {
             GameObject newShip = Instantiate(prefabShip, transform.position, Quaternion.identity);
             newShip.transform.parent = gameObject.transform;
             myButtonController.shipSelected = false;
             DestroySelecting("Selecting");
 
+        }
+        else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.turretSelected == true) // placing a turret on the space
+        {
+            GameObject newTurret = Instantiate(prefabTurret, transform.position, Quaternion.identity);
+            newTurret.transform.parent = gameObject.transform;
+            myButtonController.turretSelected = false;
+            DestroySelecting("Selecting");
+            // bring in the confirm cance rotate menu
+            // move them away after the confirm button is hit
         }
     }
 
