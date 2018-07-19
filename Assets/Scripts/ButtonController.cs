@@ -12,6 +12,7 @@ public class ButtonController : MonoBehaviour
     private TurnFlowManager turnFlowManager;
     private RectTransform confirmBaseButtons;
     private RectTransform confirmBloomButtons;
+    private RectTransform confirmCancelRotate;
     private Animator endButtonAnim;
 
 	// Use this for initialization
@@ -20,8 +21,8 @@ public class ButtonController : MonoBehaviour
         shipSelected = false;
         turretSelected = false;
         endButtonAnim = GameObject.Find("End Button").GetComponent<Animator>();
+        confirmCancelRotate = GameObject.Find("Confirm Cancel Rotate").GetComponent<RectTransform>();
         confirmBaseButtons = GameObject.Find("Confirm panel").GetComponent<RectTransform>();
-        confirmBloomButtons = GameObject.Find("Confirm bloom placement panel").GetComponent<RectTransform>();
         bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
         turnFlowManager = GameObject.Find("Turn Flow Manager").GetComponent<TurnFlowManager>();
 	}
@@ -56,19 +57,6 @@ public class ButtonController : MonoBehaviour
         changeTag.tag = "Legal Space"; // changes the clicked tiles tag back to legal so it can be used again
     }
 
-    public void ConfirmBloomPlacement() // confirm choice for control token
-    {
-        bloomController.PlaceBloomToken();
-        confirmBloomButtons.anchoredPosition = new Vector3(-793, 540);//move yourself out of the way
-        endButtonAnim.SetBool("readyToContinue", true);
-    }
-
-    public void CancelBloomPlacement() //cancel choice for control token
-    {
-        bloomController.RemoveBloomToken();
-        confirmBloomButtons.anchoredPosition = new Vector3(-793, 540);//move yourself out of the way
-    }
-
     public void SelectShip()
     {
         if (turnFlowManager.currentState == TurnFlowManager.State.action && shipSelected == false)
@@ -92,13 +80,22 @@ public class ButtonController : MonoBehaviour
             turretSelected = false;
         }
     }
-
     public void Rotate()
     {
         GameObject[] toRotate = GameObject.FindGameObjectsWithTag("Just Placed");
-        foreach (GameObject obj in toRotate)
+        foreach (GameObject turret in toRotate)
         {
-            
+            turret.transform.Rotate(0, 60, 0);
+        }
+    }
+
+    public void ConfirmTurret()
+    {
+        GameObject[] toConfirm = GameObject.FindGameObjectsWithTag("Just Placed");
+        foreach (GameObject turret in toConfirm)
+        {
+            turret.tag = "Turret";
+            confirmCancelRotate.anchoredPosition = new Vector3(-793, 540, 0);
         }
     }
 }

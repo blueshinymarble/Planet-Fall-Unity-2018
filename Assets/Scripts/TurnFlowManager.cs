@@ -35,6 +35,11 @@ public class TurnFlowManager : MonoBehaviour
         generalAnnouncer.text = "Beginning of round";
 	}
 
+    private void Update()
+    {
+        Debug.Log(Input.mousePosition);
+    }
+
     public void ManageTurn() // manages the turn 
     { // bloom state needs to place the control points and then the maximum amount of tokens on those points from the get go
         switch (currentState)

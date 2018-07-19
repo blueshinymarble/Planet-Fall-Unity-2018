@@ -22,11 +22,13 @@ public class MyTile : MonoBehaviour
     private RectTransform confirmCancel;
     private RectTransform confirmCancelBloom;
     private ButtonController myButtonController;
+    private RectTransform confirmCancelRotate;
 
     // Use this for initialization
     void Start()
     {
         myButtonController = GameObject.Find("Button Controller").GetComponent<ButtonController>();
+        confirmCancelRotate = GameObject.Find("Confirm Cancel Rotate").GetComponent<RectTransform>();
         confirmCancel = GameObject.Find("Confirm panel").GetComponent<RectTransform>();
         confirmCancelBloom = GameObject.Find("Confirm bloom placement panel").GetComponent<RectTransform>();
         bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
@@ -52,7 +54,7 @@ public class MyTile : MonoBehaviour
         }
         else if (gameObject.tag== "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.turretSelected == true)
         {
-              GameObject selecting = Instantiate(selector, gameObject.transform.position, Quaternion.identity);
+            GameObject selecting = Instantiate(selector, gameObject.transform.position, Quaternion.identity);
         }
     }
 
@@ -78,7 +80,15 @@ public class MyTile : MonoBehaviour
             newBase.transform.parent = gameObject.transform;
             DestroySelecting("Selecting");
             gameObject.GetComponentInChildren<Animator>().Play("terrain minimise");
-            confirmCancel.anchoredPosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0);
+
+            if (Input.mousePosition.x > 380f && Input.mousePosition.x < 1539f && Input.mousePosition.y > 200f)
+            {
+                confirmCancel.anchoredPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y + 10f, 0);
+            }
+            else
+            {
+                confirmCancel.anchoredPosition = new Vector3(Input.mousePosition.x, 200f, 0);
+            }
         }
         else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true) // placing a ship on the space
         {
@@ -94,7 +104,15 @@ public class MyTile : MonoBehaviour
             newTurret.transform.parent = gameObject.transform;
             myButtonController.turretSelected = false;
             DestroySelecting("Selecting");
-            // bring in the confirm cance rotate menu
+            if (Input.mousePosition.x > 740f && Input.mousePosition.y > 200f)
+            {
+                confirmCancelRotate.anchoredPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y + 10f, 0);
+            }
+            else
+            {
+                confirmCancelRotate.anchoredPosition = new Vector3(Input.mousePosition.x, 200f, 0);
+            }
+                // bring in the confirm cance rotate menu
             // move them away after the confirm button is hit
         }
     }
