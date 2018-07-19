@@ -37,7 +37,7 @@ public class TurnFlowManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(Input.mousePosition);
+        Debug.Log(currentState);
     }
 
     public void ManageTurn() // manages the turn 
@@ -79,7 +79,7 @@ public class TurnFlowManager : MonoBehaviour
                 if (playerBasePlaced == true)
                 {
                     generalAnnouncer.text = "Control Points set";
-                    endButtonAnim.SetBool("readyToContinue", false);
+                    endButtonAnim.SetBool("readyToContinue", true);
                     currentState = State.controlPoints;
                     bloomController.LegalSpaceControl();
                     bloomController.SpawnControlPoints();
@@ -89,6 +89,7 @@ public class TurnFlowManager : MonoBehaviour
             case State.bloom:
                 currentState = State.action;
                 generalAnnouncer.text = "Action phase";
+                endButtonAnim.SetBool("readyToContinue", true);
                 break;
 
             case State.action:

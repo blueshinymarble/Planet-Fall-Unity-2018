@@ -7,13 +7,11 @@ public class MyTile : MonoBehaviour
 {
     public GameObject[] TerrainTiles;
     public GameObject powerPlant;
-    public GameObject selectingSpace;
     public GameObject selector;
     public Camera cam;
-    public GameObject shipSelector;
-    public GameObject turretSelector;
     public GameObject prefabShip;
     public GameObject prefabTurret;
+    public GameObject prefabSoldier;
 
     private TurnFlowManager turnFlowManager;
     private BloomController bloomController;
@@ -43,18 +41,26 @@ public class MyTile : MonoBehaviour
 
     private void OnMouseEnter() 
     {
+        GameObject[] selectingArrows = GameObject.FindGameObjectsWithTag("Selecting");
+        foreach (GameObject arrows in selectingArrows)
+        {
+            Destroy(arrows);
+        }
         if (gameObject.tag != "Hazard" && turnFlowManager.playerBasePlaced == false && turnFlowManager.currentState == TurnFlowManager.State.firstRound) // when the mouse hovers the tile during the first round of the game the terrain of that tile shrinks to show it is a possible spawn location for the player's base
         {
-            GameObject selecting = Instantiate(selector, gameObject.transform.position, Quaternion.identity);
+            CreateSelectingArrows();
         }
         else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true)
         {
-            GameObject selectingShip = Instantiate(shipSelector, new Vector3(transform.position.x, 6f, transform.position.z), Quaternion.identity);
-            selectingShip.transform.parent = gameObject.transform;
+            CreateSelectingArrows();
         }
         else if (gameObject.tag== "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.turretSelected == true)
         {
-            GameObject selecting = Instantiate(selector, gameObject.transform.position, Quaternion.identity);
+            CreateSelectingArrows();
+        }
+        else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.soldierSelected == true)
+        {
+            CreateSelectingArrows();
         }
     }
 
@@ -73,7 +79,7 @@ public class MyTile : MonoBehaviour
     private void OnMouseDown()
     {
         if (gameObject.tag != "Hazard" && turnFlowManager.playerBasePlaced == false && turnFlowManager.currentState == TurnFlowManager.State.firstRound)
-        { // if its the first round it spawns in the player's base and brings in the confrim and cancel buttons
+        { // if its the first round it spawns in the player's base and brings in the confirm and cancel buttons
             gameObject.GetComponentInChildren<Animator>().Play("terrain minimise");
             turnFlowManager.playerBasePlaced = true;
             GameObject newBase = Instantiate(powerPlant, transform.position, Quaternion.identity);
@@ -90,7 +96,8 @@ public class MyTile : MonoBehaviour
                 confirmCancel.anchoredPosition = new Vector3(Input.mousePosition.x, 200f, 0);
             }
         }
-        else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true) // placing a ship on the space
+        else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true) 
+            // placing a ship on the space
         {
             GameObject newShip = Instantiate(prefabShip, transform.position, Quaternion.identity);
             newShip.transform.parent = gameObject.transform;
@@ -98,7 +105,8 @@ public class MyTile : MonoBehaviour
             DestroySelecting("Selecting");
 
         }
-        else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.turretSelected == true) // placing a turret on the space
+        else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.turretSelected == true) 
+            // placing a turret on the space
         {
             GameObject newTurret = Instantiate(prefabTurret, transform.position, Quaternion.identity);
             newTurret.transform.parent = gameObject.transform;
@@ -112,8 +120,11 @@ public class MyTile : MonoBehaviour
             {
                 confirmCancelRotate.anchoredPosition = new Vector3(Input.mousePosition.x, 200f, 0);
             }
-                // bring in the confirm cance rotate menu
-            // move them away after the confirm button is hit
+        }
+        else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.soldierSelected == true)
+        {
+            GameObject newSoldier = Instantiate(prefabSoldier, transform.position, Quaternion.identity);
+            newSoldier.transform.parent = gameObject.transform;
         }
     }
 
@@ -124,6 +135,12 @@ public class MyTile : MonoBehaviour
         {
             anim.Play("terrain minimise");
         }
+    }
+
+    void CreateSelectingArrows()
+    {
+        GameObject selecting = Instantiate(selector, gameObject.transform.position, Quaternion.identity);
+        selecting.transform.parent = gameObject.transform;
     }
 
     void DestroySelecting(string name)

@@ -7,6 +7,7 @@ public class ButtonController : MonoBehaviour
 {
     public bool shipSelected;
     public bool turretSelected;
+    public bool soldierSelected;
 
     private BloomController bloomController;
     private TurnFlowManager turnFlowManager;
@@ -20,6 +21,7 @@ public class ButtonController : MonoBehaviour
     {
         shipSelected = false;
         turretSelected = false;
+        soldierSelected = false;
         endButtonAnim = GameObject.Find("End Button").GetComponent<Animator>();
         confirmCancelRotate = GameObject.Find("Confirm Cancel Rotate").GetComponent<RectTransform>();
         confirmBaseButtons = GameObject.Find("Confirm panel").GetComponent<RectTransform>();
@@ -96,6 +98,18 @@ public class ButtonController : MonoBehaviour
         {
             turret.tag = "Turret";
             confirmCancelRotate.anchoredPosition = new Vector3(-793, 540, 0);
+        }
+    }
+
+    public void SelectSoldier()
+    {
+        if (turnFlowManager.currentState == TurnFlowManager.State.action && soldierSelected == false)
+        {
+            soldierSelected = true;
+        }
+        else
+        {
+            soldierSelected = false;
         }
     }
 }

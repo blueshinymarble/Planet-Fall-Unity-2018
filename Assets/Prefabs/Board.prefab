@@ -1664,14 +1664,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114080149758861676
 MonoBehaviour:
@@ -1686,14 +1684,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114103073903405512
 MonoBehaviour:
@@ -1708,14 +1704,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114142234706414886
 MonoBehaviour:
@@ -1730,14 +1724,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114148232097415746
 MonoBehaviour:
@@ -1752,14 +1744,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114151773148932714
 MonoBehaviour:
@@ -1774,14 +1764,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114174114283295636
 MonoBehaviour:
@@ -1796,14 +1784,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114181744516209854
 MonoBehaviour:
@@ -1818,14 +1804,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114281965423987812
 MonoBehaviour:
@@ -1840,14 +1824,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114291318693296682
 MonoBehaviour:
@@ -1862,14 +1844,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114325745224575024
 MonoBehaviour:
@@ -1884,14 +1864,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114341125658556110
 MonoBehaviour:
@@ -1906,14 +1884,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114395319654282694
 MonoBehaviour:
@@ -1928,14 +1904,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114395743232289438
 MonoBehaviour:
@@ -1950,14 +1924,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114419274122669116
 MonoBehaviour:
@@ -1972,14 +1944,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114453054892306474
 MonoBehaviour:
@@ -1994,14 +1964,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114519485210080970
 MonoBehaviour:
@@ -2016,14 +1984,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114545002489599324
 MonoBehaviour:
@@ -2038,14 +2004,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114545060022148486
 MonoBehaviour:
@@ -2060,14 +2024,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114563807840828704
 MonoBehaviour:
@@ -2082,14 +2044,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114627815144591956
 MonoBehaviour:
@@ -2104,14 +2064,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114647143090761066
 MonoBehaviour:
@@ -2126,14 +2084,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114648992645193042
 MonoBehaviour:
@@ -2148,14 +2104,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114655863077205090
 MonoBehaviour:
@@ -2170,14 +2124,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114658521445859040
 MonoBehaviour:
@@ -2192,14 +2144,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114672871140984206
 MonoBehaviour:
@@ -2214,14 +2164,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114680304164083746
 MonoBehaviour:
@@ -2236,14 +2184,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114721841048912978
 MonoBehaviour:
@@ -2258,14 +2204,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114722760468624468
 MonoBehaviour:
@@ -2280,14 +2224,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114754601966628732
 MonoBehaviour:
@@ -2302,14 +2244,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114775348044994896
 MonoBehaviour:
@@ -2324,14 +2264,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114804548883944596
 MonoBehaviour:
@@ -2346,14 +2284,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114814697925313936
 MonoBehaviour:
@@ -2385,14 +2321,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114923931077968338
 MonoBehaviour:
@@ -2407,14 +2341,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114944204129585800
 MonoBehaviour:
@@ -2429,14 +2361,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114950835702619762
 MonoBehaviour:
@@ -2451,14 +2381,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!114 &114953237940598246
 MonoBehaviour:
@@ -2473,14 +2401,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TerrainTiles: []
   powerPlant: {fileID: 1066865285577144, guid: 71f39d5c258981a45a52aa0a65cb134b, type: 2}
-  selectingSpace: {fileID: 1004224867898094, guid: 3a36ac8b0abb32b49a3a6b102ebb92f0,
-    type: 2}
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
-  shipSelector: {fileID: 1379270655611756, guid: 356350b67fdd5c445a65f24b59349ecc,
-    type: 2}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
   prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+    type: 2}
+  prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
 --- !u!212 &212112783407225522
 SpriteRenderer:
