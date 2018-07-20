@@ -8,6 +8,7 @@ public class ButtonController : MonoBehaviour
     public bool shipSelected;
     public bool turretSelected;
     public bool soldierSelected;
+    public bool mechSelected;
 
     private BloomController bloomController;
     private TurnFlowManager turnFlowManager;
@@ -22,6 +23,7 @@ public class ButtonController : MonoBehaviour
         shipSelected = false;
         turretSelected = false;
         soldierSelected = false;
+        mechSelected = false;
         endButtonAnim = GameObject.Find("End Button").GetComponent<Animator>();
         confirmCancelRotate = GameObject.Find("Confirm Cancel Rotate").GetComponent<RectTransform>();
         confirmBaseButtons = GameObject.Find("Confirm panel").GetComponent<RectTransform>();
@@ -97,8 +99,19 @@ public class ButtonController : MonoBehaviour
         foreach (GameObject turret in toConfirm)
         {
             turret.tag = "Turret";
-            confirmCancelRotate.anchoredPosition = new Vector3(-793, 540, 0);
         }
+        confirmCancelRotate.anchoredPosition = new Vector3(-793, 540, 0);
+        
+    }
+
+    public void CancelTurret()
+    {
+        GameObject[] toCancel = GameObject.FindGameObjectsWithTag("Just Placed");
+        foreach (GameObject turret in toCancel)
+        {
+            Destroy(turret);
+        }
+        confirmCancelRotate.anchoredPosition = new Vector3(-793, 540, 0);
     }
 
     public void SelectSoldier()
@@ -110,6 +123,18 @@ public class ButtonController : MonoBehaviour
         else
         {
             soldierSelected = false;
+        }
+    }
+
+    public void SelectMech()
+    {
+        if (turnFlowManager.currentState == TurnFlowManager.State.action && mechSelected == false)
+        {
+            mechSelected = true;
+        }
+        else
+        {
+            mechSelected = false;
         }
     }
 }

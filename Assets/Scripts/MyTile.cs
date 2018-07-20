@@ -12,6 +12,7 @@ public class MyTile : MonoBehaviour
     public GameObject prefabShip;
     public GameObject prefabTurret;
     public GameObject prefabSoldier;
+    public GameObject prefabMech;
 
     private TurnFlowManager turnFlowManager;
     private BloomController bloomController;
@@ -59,6 +60,10 @@ public class MyTile : MonoBehaviour
             CreateSelectingArrows();
         }
         else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.soldierSelected == true)
+        {
+            CreateSelectingArrows();
+        }
+        else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.mechSelected == true)
         {
             CreateSelectingArrows();
         }
@@ -123,8 +128,20 @@ public class MyTile : MonoBehaviour
         }
         else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.soldierSelected == true)
         {
+            // placing a soldier on the space
             GameObject newSoldier = Instantiate(prefabSoldier, transform.position, Quaternion.identity);
             newSoldier.transform.parent = gameObject.transform;
+            myButtonController.soldierSelected = false;
+            DestroySelecting("Selecting");
+            
+        }
+        else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.mechSelected == true)
+        {
+            // placing a mech
+            GameObject newMech = Instantiate(prefabMech, transform.position, Quaternion.identity);
+            newMech.transform.parent = gameObject.transform;
+            myButtonController.mechSelected = false;
+            DestroySelecting("Selecting");
         }
     }
 
