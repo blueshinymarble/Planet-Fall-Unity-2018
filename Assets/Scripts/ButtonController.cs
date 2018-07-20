@@ -51,14 +51,13 @@ public class ButtonController : MonoBehaviour
         GameObject[] basesToDestroy = GameObject.FindGameObjectsWithTag("Just Placed Base");
         foreach (GameObject placedBase in basesToDestroy) // destroys the instantiated base prefab
         {
+            Building building = placedBase.GetComponent<Building>(); // the script is called base not building
+            building.ChangeTagToLegalSpace();
             Destroy(placedBase);
         }
         confirmBaseButtons.anchoredPosition = new Vector3(-793, 540); //moves the confirm cancel buttons out of the way
         endButtonAnim.SetBool("readyToContinue", false); // makes sure the end turn button can't be pressed
         turnFlowManager.playerBasePlaced = false; // this bool is necessary so that terrain minimise maximise animation doesnt play when the mouse is just hovering over a terrain
-        GameObject.FindGameObjectWithTag("Occupied").GetComponentInChildren<Animator>().Play("terrain maximise"); // plays terrain maximise animation to make the terrain reappear
-        GameObject changeTag = GameObject.FindGameObjectWithTag("Occupied"); //finds the tile that was clicked
-        changeTag.tag = "Legal Space"; // changes the clicked tiles tag back to legal so it can be used again
     }
 
     public void SelectShip()

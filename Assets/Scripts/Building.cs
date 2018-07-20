@@ -11,4 +11,8 @@ public class Building : MonoBehaviour
         gameObject.transform.parent.tag = "Occupied"; // changes the tag of the parent tile of this terrain to occupied so it cannot be used to spawn control points
 	}
 	
+    public void ChangeTagToLegalSpace()
+    {
+        gameObject.transform.parent.tag = "Legal Space";
+    }
 }
