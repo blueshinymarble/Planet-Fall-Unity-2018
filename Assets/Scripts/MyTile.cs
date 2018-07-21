@@ -90,15 +90,8 @@ public class MyTile : MonoBehaviour
             GameObject newBase = Instantiate(powerPlant, transform.position, Quaternion.identity);
             newBase.transform.parent = gameObject.transform;
             DestroySelecting("Selecting");
+            confirmCancel.anchoredPosition = new Vector3(960, 270, 0);
 
-            if (Input.mousePosition.x > 380f && Input.mousePosition.x < 1539f && Input.mousePosition.y > 200f)
-            {
-                confirmCancel.anchoredPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y + 10f, 0);
-            }
-            else
-            {
-                confirmCancel.anchoredPosition = new Vector3(Input.mousePosition.x, 200f, 0);
-            }
         }
         else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true) 
             // placing a ship on the space
@@ -116,14 +109,7 @@ public class MyTile : MonoBehaviour
             newTurret.transform.parent = gameObject.transform;
             myButtonController.turretSelected = false;
             DestroySelecting("Selecting");
-            if (Input.mousePosition.x > 740f && Input.mousePosition.y > 200f)
-            {
-                confirmCancelRotate.anchoredPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y + 10f, 0);
-            }
-            else
-            {
-                confirmCancelRotate.anchoredPosition = new Vector3(Input.mousePosition.x, 200f, 0);
-            }
+            confirmCancelRotate.anchoredPosition = new Vector3(960, 270, 0);
         }
         else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.soldierSelected == true)
         {

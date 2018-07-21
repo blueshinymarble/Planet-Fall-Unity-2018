@@ -28,6 +28,7 @@ namespace RTS_Cam
 
         private Transform m_Transform; //camera tranform
         public bool useFixedUpdate = false; //use FixedUpdate() or Update()
+        private GameObject game;
 
         #region Movement
 
@@ -167,6 +168,7 @@ namespace RTS_Cam
 
         private void Start()
         {
+            game = GameObject.Find("Game");
             m_Transform = transform;
         }
 
@@ -279,11 +281,21 @@ namespace RTS_Cam
         /// </summary>
         private void Rotation()
         {
+            /*if (Input.GetKey(rotateRightKey))
+            {
+                game.transform.Rotate(Vector3.up, RotationDirection * Time.deltaTime * rotationSped, Space.World);
+            }
+            else if (Input.GetKey(rotateLeftKey))
+            {
+                game.transform.Rotate(Vector3.up, RotationDirection * Time.deltaTime * rotationSped, Space.World);
+            }*/
+            
             if(useKeyboardRotation)
                 transform.Rotate(Vector3.up, RotationDirection * Time.deltaTime * rotationSped, Space.World);
 
             if (useMouseRotation && Input.GetKey(mouseRotationKey))
                 m_Transform.Rotate(Vector3.up, -MouseAxis.x * Time.deltaTime * mouseRotationSpeed, Space.World);
+                
         }
 
         /// <summary>

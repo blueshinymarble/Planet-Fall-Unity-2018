@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Hazard.cs" />
     <Compile Include="Assets\Scripts\MyTile.cs" />
     <Compile Include="Assets\Scripts\Selector.cs" />
+    <Compile Include="Assets\Scripts\TerrainScript.cs" />
     <Compile Include="Assets\Scripts\TurnFlowManager.cs" />
     <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
     <None Include="Assets\Simple UI\Fonts\OFL.txt" />
