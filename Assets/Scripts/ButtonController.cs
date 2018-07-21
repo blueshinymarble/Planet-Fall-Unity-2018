@@ -51,8 +51,8 @@ public class ButtonController : MonoBehaviour
         GameObject[] basesToDestroy = GameObject.FindGameObjectsWithTag("Just Placed Base");
         foreach (GameObject placedBase in basesToDestroy) // destroys the instantiated base prefab
         {
-            Building building = placedBase.GetComponent<Building>(); // the script is called base not building
-            building.ChangeTagToLegalSpace();
+            Base baseScript = placedBase.GetComponent<Base>(); // the script is called base not building
+            baseScript.ChangeParentTagPlayAnim();
             Destroy(placedBase);
         }
         confirmBaseButtons.anchoredPosition = new Vector3(-793, 540); //moves the confirm cancel buttons out of the way

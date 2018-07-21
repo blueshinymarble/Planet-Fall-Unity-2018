@@ -90,7 +90,6 @@ public class MyTile : MonoBehaviour
             GameObject newBase = Instantiate(powerPlant, transform.position, Quaternion.identity);
             newBase.transform.parent = gameObject.transform;
             DestroySelecting("Selecting");
-            gameObject.GetComponentInChildren<Animator>().Play("terrain minimise");
 
             if (Input.mousePosition.x > 380f && Input.mousePosition.x < 1539f && Input.mousePosition.y > 200f)
             {
