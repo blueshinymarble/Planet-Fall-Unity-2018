@@ -83,6 +83,9 @@ public class MyTile : MonoBehaviour
 
     private void OnMouseDown()
     {
+
+        //need an if statement here that controls what happens when a unit moves into a space with another unit. animations need to play and shields need to be broken after which units need to either be destroyed or stay on the map with less shield
+
         if (gameObject.tag != "Hazard" && turnFlowManager.playerBasePlaced == false && turnFlowManager.currentState == TurnFlowManager.State.firstRound)
         { // if its the first round it spawns in the player's base and brings in the confirm and cancel buttons
             gameObject.GetComponentInChildren<Animator>().Play("terrain minimise");
@@ -110,6 +113,7 @@ public class MyTile : MonoBehaviour
             myButtonController.turretSelected = false;
             DestroySelecting("Selecting");
             confirmCancelRotate.anchoredPosition = new Vector3(960, 270, 0);
+            MinimiseTerrain();
         }
         else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.soldierSelected == true)
         {
@@ -118,6 +122,7 @@ public class MyTile : MonoBehaviour
             newSoldier.transform.parent = gameObject.transform;
             myButtonController.soldierSelected = false;
             DestroySelecting("Selecting");
+            MinimiseTerrain();
             
         }
         else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.mechSelected == true)
@@ -132,6 +137,7 @@ public class MyTile : MonoBehaviour
 
     void MinimiseTerrain() // method that was written to combat a bug that occured when a base was placed and cancelled but the mouse was already hovering on a tile and base placed the tile wouldnt play the minimise animation
     {   // this method ensures the animation will always be played
+        //keeps throwing warnings about not finding the animations because it ends up checking all children for the animation instead of the terrain only. need to write a fix to correct this. maybe change the tag of the terrain tiles and tell the method to only search those tiles for it
         Animator[] myTerrainTileAnimators = gameObject.GetComponentsInChildren<Animator>();
         foreach (Animator anim in myTerrainTileAnimators)
         {

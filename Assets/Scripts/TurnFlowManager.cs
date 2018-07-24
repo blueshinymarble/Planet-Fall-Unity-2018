@@ -19,6 +19,8 @@ public class TurnFlowManager : MonoBehaviour
     private BloomController bloomController;
     private Animator endButtonAnim;
 
+    //either turn flow manager or another turn controller needs a turn action counter starting at two and counting down whenever someone takes an action
+
 	// Use this for initialization
 	void Start ()
     {

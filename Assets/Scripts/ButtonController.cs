@@ -31,6 +31,14 @@ public class ButtonController : MonoBehaviour
         turnFlowManager = GameObject.Find("Turn Flow Manager").GetComponent<TurnFlowManager>();
 	}
 
+    void SetAllToFalse()
+    {
+        shipSelected = false;
+        turretSelected = false;
+        soldierSelected = false;
+        mechSelected = false;
+    }
+
     public void Next() // when the end turn button is pressed it runs this method
     {
         if (endButtonAnim.GetBool("readyToContinue") == true)
@@ -64,11 +72,12 @@ public class ButtonController : MonoBehaviour
     {
         if (turnFlowManager.currentState == TurnFlowManager.State.action && shipSelected == false)
         {
+            SetAllToFalse();
             shipSelected = true;
         }
         else
         {
-            shipSelected = false;
+            SetAllToFalse();
         }
     }
 
@@ -76,11 +85,12 @@ public class ButtonController : MonoBehaviour
     {
         if (turnFlowManager.currentState == TurnFlowManager.State.action && turretSelected == false)
         {
+            SetAllToFalse();
             turretSelected = true;
         }
         else
         {
-            turretSelected = false;
+            SetAllToFalse();
         }
     }
     public void Rotate()
@@ -117,11 +127,12 @@ public class ButtonController : MonoBehaviour
     {
         if (turnFlowManager.currentState == TurnFlowManager.State.action && soldierSelected == false)
         {
+            SetAllToFalse();
             soldierSelected = true;
         }
         else
         {
-            soldierSelected = false;
+            SetAllToFalse();
         }
     }
 
@@ -129,11 +140,12 @@ public class ButtonController : MonoBehaviour
     {
         if (turnFlowManager.currentState == TurnFlowManager.State.action && mechSelected == false)
         {
+            SetAllToFalse();
             mechSelected = true;
         }
         else
         {
-            mechSelected = false;
+            SetAllToFalse();
         }
     }
 }

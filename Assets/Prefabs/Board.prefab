@@ -922,7 +922,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1133668039157110}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.845, y: 15.000008, z: 0}
   m_LocalScale: {x: 1, y: 1.0000005, z: 1.0000005}
   m_Children: []
@@ -1667,10 +1667,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114080149758861676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1687,10 +1688,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114103073903405512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1707,10 +1709,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114142234706414886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1727,10 +1730,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114148232097415746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1747,10 +1751,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114151773148932714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1767,10 +1772,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114174114283295636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1787,10 +1793,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114181744516209854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1807,10 +1814,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114281965423987812
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1827,10 +1835,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114291318693296682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1847,10 +1856,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114325745224575024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1867,10 +1877,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114341125658556110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1887,10 +1898,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114395319654282694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1907,10 +1919,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114395743232289438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1927,10 +1940,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114419274122669116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1947,10 +1961,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114453054892306474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1967,10 +1982,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114519485210080970
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1987,10 +2003,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114545002489599324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2007,10 +2024,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114545060022148486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2027,10 +2045,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114563807840828704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2047,10 +2066,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114627815144591956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2067,10 +2087,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114647143090761066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2087,10 +2108,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114648992645193042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2107,10 +2129,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114655863077205090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2127,10 +2150,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114658521445859040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2147,10 +2171,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114672871140984206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2167,10 +2192,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114680304164083746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2187,10 +2213,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114721841048912978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2207,10 +2234,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114722760468624468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2227,10 +2255,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114754601966628732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2247,10 +2276,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114775348044994896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2267,10 +2297,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114804548883944596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2287,10 +2318,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114814697925313936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2324,10 +2356,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114923931077968338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2344,10 +2377,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114944204129585800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2364,10 +2398,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114950835702619762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2384,10 +2419,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!114 &114953237940598246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2404,10 +2440,11 @@ MonoBehaviour:
   selector: {fileID: 1487494962931678, guid: bd73aaf864469e0419c7729e3f40f38e, type: 2}
   cam: {fileID: 0}
   prefabShip: {fileID: 1096549261249132, guid: 68873e0d901ec67499e182e215c52d08, type: 2}
-  prefabTurret: {fileID: 1015845371135028, guid: a3b51c74a9352b2468900791e61dc9e1,
+  prefabTurret: {fileID: 1520188481220676, guid: a1d4792727d667b4c916fcd3eb2dd67c,
     type: 2}
   prefabSoldier: {fileID: 1785006075068622, guid: fc5885ea6b118a64091c228af753d42f,
     type: 2}
+  prefabMech: {fileID: 1323654755996862, guid: bd51aa6258247cc498e6b7f5a0b8f09e, type: 2}
 --- !u!212 &212112783407225522
 SpriteRenderer:
   m_ObjectHideFlags: 1
