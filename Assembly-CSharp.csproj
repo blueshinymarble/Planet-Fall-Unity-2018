@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Soldier.cs" />
     <Compile Include="Assets\Scripts\TerrainScript.cs" />
     <Compile Include="Assets\Scripts\TurnFlowManager.cs" />
+    <Compile Include="Assets\Scripts\TurretController.cs" />
     <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
     <None Include="Assets\Simple UI\Fonts\OFL.txt" />
     <Reference Include="UnityEditor.StandardEvents">
