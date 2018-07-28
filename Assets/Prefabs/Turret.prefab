@@ -981,3 +981,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pip: {fileID: 1414904859932256, guid: e7743de1865f3ef4083375c590ccabd8, type: 2}
+  thisUnitSlots:
+  - {fileID: 4759525413479518}
+  - {fileID: 4832523363663992}
+  - {fileID: 4723915275648384}
+  - {fileID: 4517999088960784}
+  - {fileID: 4553689993170826}
+  - {fileID: 4793138674269618}
+  myMaterialsArray:
+  - {fileID: 2100000, guid: ee3f6c1038bd00146a1c9933cd471997, type: 2}
+  - {fileID: 2100000, guid: a43cf2a88b03ae844a4ce7c7e9e466fd, type: 2}
+  - {fileID: 2100000, guid: 7e9cdd520a8b757429729a7f75d444e9, type: 2}

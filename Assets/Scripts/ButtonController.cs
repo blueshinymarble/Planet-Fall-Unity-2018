@@ -9,6 +9,7 @@ public class ButtonController : MonoBehaviour
     public bool turretSelected;
     public bool soldierSelected;
     public bool mechSelected;
+    public Quaternion rotationToRevertTo;
 
     private BloomController bloomController;
     private TurnFlowManager turnFlowManager;
@@ -16,10 +17,12 @@ public class ButtonController : MonoBehaviour
     private RectTransform confirmBloomButtons;
     private RectTransform confirmCancelRotate;
     private Animator endButtonAnim;
+    private Vector3 toRest;
 
 	// Use this for initialization
 	void Start ()
     {
+        toRest = new Vector3(-793, 540, 0);
         shipSelected = false;
         turretSelected = false;
         soldierSelected = false;
@@ -51,7 +54,7 @@ public class ButtonController : MonoBehaviour
     public void ConfirmBase() // confirm the space chosen for player's base
     {
         endButtonAnim.SetBool("readyToContinue", true);//make the next button clickable
-        confirmBaseButtons.anchoredPosition = new Vector3(-793, 540);//move yourself out of the way
+        confirmBaseButtons.anchoredPosition = toRest;//move yourself out of the way
     }
 
     public void CancelBase() // cancels the player's selection for their base
@@ -63,7 +66,7 @@ public class ButtonController : MonoBehaviour
             baseScript.ChangeParentTagPlayAnim();
             Destroy(placedBase);
         }
-        confirmBaseButtons.anchoredPosition = new Vector3(-793, 540); //moves the confirm cancel buttons out of the way
+        confirmBaseButtons.anchoredPosition = toRest; //moves the confirm cancel buttons out of the way
         endButtonAnim.SetBool("readyToContinue", false); // makes sure the end turn button can't be pressed
         turnFlowManager.playerBasePlaced = false; // this bool is necessary so that terrain minimise maximise animation doesnt play when the mouse is just hovering over a terrain
     }
@@ -109,7 +112,7 @@ public class ButtonController : MonoBehaviour
         {
             turret.tag = "Turret";
         }
-        confirmCancelRotate.anchoredPosition = new Vector3(-793, 540, 0);
+        confirmCancelRotate.anchoredPosition = toRest;
         
     }
 
@@ -120,7 +123,7 @@ public class ButtonController : MonoBehaviour
         {
             Destroy(turret);
         }
-        confirmCancelRotate.anchoredPosition = new Vector3(-793, 540, 0);
+        confirmCancelRotate.anchoredPosition = toRest;
     }
 
     public void SelectSoldier()
@@ -147,5 +150,21 @@ public class ButtonController : MonoBehaviour
         {
             SetAllToFalse();
         }
+    }
+
+    public void CancelSelection()
+    {
+        GameObject[] cancelSelections = GameObject.FindGameObjectsWithTag("Just Placed");
+        foreach (GameObject toCancel in cancelSelections)
+        { 
+            toCancel.tag = ("untagged");
+            toCancel.transform.rotation = rotationToRevertTo;
+        }
+        confirmCancelRotate.anchoredPosition = toRest;
+    }
+
+    public void MoveUnitOneSpace()
+    {
+        // if this button is pressed the unit moves one space in the direction of its red pip
     }
 }
