@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Building.cs" />
     <Compile Include="Assets\Scripts\ButtonController.cs" />
     <Compile Include="Assets\Scripts\ControlPoint.cs" />
+    <Compile Include="Assets\Scripts\DamagePip.cs" />
     <Compile Include="Assets\Scripts\Hazard.cs" />
     <Compile Include="Assets\Scripts\ModelBaseController.cs" />
     <Compile Include="Assets\Scripts\MyTile.cs" />

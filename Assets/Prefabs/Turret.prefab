@@ -980,7 +980,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1d27331d70bda4591b5edeff06fb9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pip: {fileID: 1414904859932256, guid: e7743de1865f3ef4083375c590ccabd8, type: 2}
   thisUnitSlots:
   - {fileID: 4759525413479518}
   - {fileID: 4832523363663992}
@@ -988,7 +987,7 @@ MonoBehaviour:
   - {fileID: 4517999088960784}
   - {fileID: 4553689993170826}
   - {fileID: 4793138674269618}
-  myMaterialsArray:
-  - {fileID: 2100000, guid: ee3f6c1038bd00146a1c9933cd471997, type: 2}
-  - {fileID: 2100000, guid: a43cf2a88b03ae844a4ce7c7e9e466fd, type: 2}
-  - {fileID: 2100000, guid: 7e9cdd520a8b757429729a7f75d444e9, type: 2}
+  Pips:
+  - {fileID: 1414904859932256, guid: 643bbb24a9a8cb84598ec654b00f73f5, type: 2}
+  - {fileID: 1414904859932256, guid: 178f93288838a8d4691fd0aadac42089, type: 2}
+  - {fileID: 1414904859932256, guid: 850a0f13c7d16d64fbcdffa5e7db8dd8, type: 2}

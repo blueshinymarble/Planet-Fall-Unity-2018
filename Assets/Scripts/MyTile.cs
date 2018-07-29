@@ -22,10 +22,12 @@ public class MyTile : MonoBehaviour
     private RectTransform confirmCancelBloom;
     private ButtonController myButtonController;
     private RectTransform confirmCancelRotate;
+    private Vector3 toSelect;
 
     // Use this for initialization
     void Start()
     {
+        toSelect = new Vector3(920, 210, 0);
         myButtonController = GameObject.Find("Button Controller").GetComponent<ButtonController>();
         confirmCancelRotate = GameObject.Find("Confirm Cancel Rotate").GetComponent<RectTransform>();
         confirmCancel = GameObject.Find("Confirm panel").GetComponent<RectTransform>();
@@ -93,7 +95,7 @@ public class MyTile : MonoBehaviour
             GameObject newBase = Instantiate(powerPlant, transform.position, Quaternion.identity);
             newBase.transform.parent = gameObject.transform;
             DestroySelecting("Selecting");
-            confirmCancel.anchoredPosition = new Vector3(960, 270, 0);
+            confirmCancel.anchoredPosition = toSelect;
 
         }
         else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.shipSelected == true) 
@@ -112,7 +114,7 @@ public class MyTile : MonoBehaviour
             newTurret.transform.parent = gameObject.transform;
             myButtonController.turretSelected = false;
             DestroySelecting("Selecting");
-            confirmCancelRotate.anchoredPosition = new Vector3(960, 270, 0);
+            confirmCancelRotate.anchoredPosition = toSelect;
             MinimiseTerrain();
         }
         else if (gameObject.tag == "Legal Space" && turnFlowManager.currentState == TurnFlowManager.State.action && myButtonController.soldierSelected == true)
@@ -121,6 +123,7 @@ public class MyTile : MonoBehaviour
             GameObject newSoldier = Instantiate(prefabSoldier, transform.position, Quaternion.identity);
             newSoldier.transform.parent = gameObject.transform;
             myButtonController.soldierSelected = false;
+            confirmCancelRotate.anchoredPosition = toSelect;
             DestroySelecting("Selecting");
             MinimiseTerrain();
             
@@ -131,6 +134,7 @@ public class MyTile : MonoBehaviour
             GameObject newMech = Instantiate(prefabMech, transform.position, Quaternion.identity);
             newMech.transform.parent = gameObject.transform;
             myButtonController.mechSelected = false;
+            confirmCancelRotate.anchoredPosition = toSelect;
             DestroySelecting("Selecting");
         }
     }
@@ -138,10 +142,17 @@ public class MyTile : MonoBehaviour
     void MinimiseTerrain() // method that was written to combat a bug that occured when a base was placed and cancelled but the mouse was already hovering on a tile and base placed the tile wouldnt play the minimise animation
     {   // this method ensures the animation will always be played
         //keeps throwing warnings about not finding the animations because it ends up checking all children for the animation instead of the terrain only. need to write a fix to correct this. maybe change the tag of the terrain tiles and tell the method to only search those tiles for it
-        Animator[] myTerrainTileAnimators = gameObject.GetComponentsInChildren<Animator>();
+        /*Animator[] myTerrainTileAnimators = gameObject.GetComponentsInChildren<Animator>();
         foreach (Animator anim in myTerrainTileAnimators)
         {
-            anim.Play("terrain minimise");
+            anim.Play("terrain minimise"); 
+        }*/
+        foreach (Transform child in transform)
+        {
+            if (child.gameObject.GetComponent<TerrainScript>())
+            {
+                child.gameObject.GetComponent<Animator>().Play("terrain minimise");
+            }
         }
     }
 

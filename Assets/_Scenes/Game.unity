@@ -2863,7 +2863,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1135033137}
-        m_MethodName: ConfirmTurret
+        m_MethodName: ConfirmSelection
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3883,6 +3883,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1780464827}
+--- !u!1001 &1877329020
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1942418185}
+    m_Modifications:
+    - target: {fileID: 4431953845891758, guid: 555fb1311e885614cadf90d152c618f2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431953845891758, guid: 555fb1311e885614cadf90d152c618f2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431953845891758, guid: 555fb1311e885614cadf90d152c618f2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431953845891758, guid: 555fb1311e885614cadf90d152c618f2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431953845891758, guid: 555fb1311e885614cadf90d152c618f2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000029802326
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431953845891758, guid: 555fb1311e885614cadf90d152c618f2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000014901163
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431953845891758, guid: 555fb1311e885614cadf90d152c618f2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431953845891758, guid: 555fb1311e885614cadf90d152c618f2, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 555fb1311e885614cadf90d152c618f2, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1884053594
 GameObject:
   m_ObjectHideFlags: 0
@@ -4005,6 +4047,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1884053594}
+--- !u!4 &1942418185 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4634304094153430, guid: b0269358e61cb64428977a52daf3a3d5,
+    type: 2}
+  m_PrefabInternal: {fileID: 746992653}
 --- !u!1001 &1953627316
 Prefab:
   m_ObjectHideFlags: 0

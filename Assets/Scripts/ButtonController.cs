@@ -105,18 +105,18 @@ public class ButtonController : MonoBehaviour
         }
     }
 
-    public void ConfirmTurret()
+    public void ConfirmSelection()
     {
         GameObject[] toConfirm = GameObject.FindGameObjectsWithTag("Just Placed");
         foreach (GameObject turret in toConfirm)
         {
-            turret.tag = "Turret";
+            turret.tag = "No tag";
         }
         confirmCancelRotate.anchoredPosition = toRest;
         
     }
 
-    public void CancelTurret()
+    public void Cancel()
     {
         GameObject[] toCancel = GameObject.FindGameObjectsWithTag("Just Placed");
         foreach (GameObject turret in toCancel)
@@ -156,9 +156,27 @@ public class ButtonController : MonoBehaviour
     {
         GameObject[] cancelSelections = GameObject.FindGameObjectsWithTag("Just Placed");
         foreach (GameObject toCancel in cancelSelections)
-        { 
-            toCancel.tag = ("untagged");
-            toCancel.transform.rotation = rotationToRevertTo;
+        {
+            if (toCancel.tag == "Just Placed")
+            {
+                if (toCancel.GetComponent<TurretController>())
+                {
+                    toCancel.GetComponent<TurretController>().ChangeParentTagPlayAnim();
+                    Destroy(toCancel);
+                    confirmCancelRotate.anchoredPosition = toRest;
+                }
+                else if (toCancel.GetComponent<Soldier>())
+                {
+                    toCancel.GetComponent<Soldier>().ChangeParentTagPlayAnim();
+                    Destroy(toCancel);
+                    confirmCancelRotate.anchoredPosition = toRest;
+                }
+            }
+            else
+            {
+                toCancel.tag = ("No tag");
+                toCancel.transform.rotation = rotationToRevertTo;
+            }
         }
         confirmCancelRotate.anchoredPosition = toRest;
     }
