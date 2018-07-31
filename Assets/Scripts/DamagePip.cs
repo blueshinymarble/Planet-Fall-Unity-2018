@@ -21,4 +21,12 @@ public class DamagePip : MonoBehaviour
     {
 		
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.transform.parent.tag == "Legal")
+        {
+            Debug.Log("Collision detected");
+        }
+    }
 }
