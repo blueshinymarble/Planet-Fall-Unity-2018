@@ -10,7 +10,7 @@ public class Soldier : MonoBehaviour
 
     private List<GameObject> pipsList = new List<GameObject>();
     private ModelBaseController baseController;
-    private RectTransform confirmCancelRotate;
+    private RectTransform soldierPanel;
     private ButtonController buttonController;
     //bool will move
     //bool will shoot and remain on my space
@@ -26,7 +26,7 @@ public class Soldier : MonoBehaviour
         gameObject.tag = "Just Placed";
         gameObject.transform.parent.tag = "Occupied";
         buttonController = GameObject.Find("Button Controller").GetComponent<ButtonController>();
-        confirmCancelRotate = GameObject.Find("Confirm Cancel Rotate").GetComponent<RectTransform>();
+        soldierPanel = GameObject.Find("Soldier Panel").GetComponent<RectTransform>();
         baseController = GetComponentInChildren<ModelBaseController>();
         ChoosePips();
 	}
@@ -45,7 +45,7 @@ public class Soldier : MonoBehaviour
             toChange.tag = "No tag";
         }
         buttonController.rotationToRevertTo = gameObject.transform.rotation;
-        confirmCancelRotate.anchoredPosition = new Vector3(960, 270);
+        soldierPanel.anchoredPosition = new Vector3(960, 300);
         if (gameObject.tag != "Just Selected")
         {
             gameObject.tag = "Just Selected";

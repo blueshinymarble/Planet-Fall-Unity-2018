@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class ButtonController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class ButtonController : MonoBehaviour
     private RectTransform confirmBaseButtons;
     private RectTransform confirmBloomButtons;
     private RectTransform confirmCancelRotate;
+    private RectTransform soldierPanel;
     private Animator endButtonAnim;
     private Vector3 toRest;
 
@@ -30,6 +32,7 @@ public class ButtonController : MonoBehaviour
         endButtonAnim = GameObject.Find("End Button").GetComponent<Animator>();
         confirmCancelRotate = GameObject.Find("Confirm Cancel Rotate").GetComponent<RectTransform>();
         confirmBaseButtons = GameObject.Find("Confirm panel").GetComponent<RectTransform>();
+        soldierPanel = GameObject.Find("Soldier Panel").GetComponent<RectTransform>();
         bloomController = GameObject.Find("Bloom Controller").GetComponent<BloomController>();
         turnFlowManager = GameObject.Find("Turn Flow Manager").GetComponent<TurnFlowManager>();
 	}
@@ -98,7 +101,11 @@ public class ButtonController : MonoBehaviour
     }
     public void Rotate()
     {
-        GameObject[] toRotate = GameObject.FindGameObjectsWithTag("Just Placed");
+        GameObject[] justPlaced = GameObject.FindGameObjectsWithTag("Just Placed");
+        GameObject[] justSelected = GameObject.FindGameObjectsWithTag("Just Selected");
+        List<GameObject> toRotate = new List<GameObject>();
+        toRotate.AddRange(justPlaced);
+        toRotate.AddRange(justSelected);
         foreach (GameObject turret in toRotate)
         {
             turret.transform.Rotate(0, 60, 0);
@@ -107,13 +114,17 @@ public class ButtonController : MonoBehaviour
 
     public void ConfirmSelection()
     {
-        GameObject[] toConfirm = GameObject.FindGameObjectsWithTag("Just Placed");
+        GameObject[] justPlaced = GameObject.FindGameObjectsWithTag("Just Placed");
+        GameObject[] justSelected = GameObject.FindGameObjectsWithTag("Just Selected");
+        List<GameObject> toConfirm = new List<GameObject>();
+        toConfirm.AddRange(justPlaced);
+        toConfirm.AddRange(justSelected);
         foreach (GameObject turret in toConfirm)
         {
             turret.tag = "No tag";
         }
         confirmCancelRotate.anchoredPosition = toRest;
-        
+        soldierPanel.anchoredPosition = toRest;
     }
 
     public void Cancel()
@@ -124,6 +135,7 @@ public class ButtonController : MonoBehaviour
             Destroy(turret);
         }
         confirmCancelRotate.anchoredPosition = toRest;
+        soldierPanel.anchoredPosition = toRest;
     }
 
     public void SelectSoldier()
@@ -154,35 +166,41 @@ public class ButtonController : MonoBehaviour
 
     public void CancelSelection()
     {
-        GameObject[] cancelSelections = GameObject.FindGameObjectsWithTag("Just Placed");
-        foreach (GameObject toCancel in cancelSelections)
+        GameObject[] justPlaced = GameObject.FindGameObjectsWithTag("Just Placed");
+        GameObject[] justSelected = GameObject.FindGameObjectsWithTag("Just Selected");
+        List<GameObject> toCancel = new List<GameObject>();
+        toCancel.AddRange(justPlaced);
+        toCancel.AddRange(justSelected);
+        foreach (GameObject objectToCancel in toCancel)
         {
-            if (toCancel.tag == "Just Placed")
+            if (objectToCancel.tag == "Just Placed")
             {
-                if (toCancel.GetComponent<TurretController>())
+                if (objectToCancel.GetComponent<TurretController>())
                 {
-                    toCancel.GetComponent<TurretController>().ChangeParentTagPlayAnim();
-                    Destroy(toCancel);
+                    objectToCancel.GetComponent<TurretController>().ChangeParentTagPlayAnim();
+                    Destroy(objectToCancel);
                     confirmCancelRotate.anchoredPosition = toRest;
                 }
-                else if (toCancel.GetComponent<Soldier>())
+                else if (objectToCancel.GetComponent<Soldier>())
                 {
-                    toCancel.GetComponent<Soldier>().ChangeParentTagPlayAnim();
-                    Destroy(toCancel);
+                    objectToCancel.GetComponent<Soldier>().ChangeParentTagPlayAnim();
+                    Destroy(objectToCancel);
                     confirmCancelRotate.anchoredPosition = toRest;
                 }
             }
             else
             {
-                toCancel.tag = ("No tag");
-                toCancel.transform.rotation = rotationToRevertTo;
+                objectToCancel.tag = ("No tag");
+                objectToCancel.transform.rotation = rotationToRevertTo;
             }
         }
         confirmCancelRotate.anchoredPosition = toRest;
+        soldierPanel.anchoredPosition = toRest;
     }
 
     public void MoveUnitOneSpace()
     {
+
         // if this button is pressed the unit moves one space in the direction of its red pip
     }
 }

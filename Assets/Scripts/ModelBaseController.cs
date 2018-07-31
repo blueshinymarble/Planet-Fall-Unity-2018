@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class ModelBaseController : MonoBehaviour
 {
-    public Material shield;
-    public Material vulnerable;
-    public Material damage;
+    private GameObject moveAttack;
 
     // Use this for initialization
     void Start()
     {
-
+        SetCheckerToDamage();
     }
 
     // Update is called once per frame
@@ -20,26 +18,22 @@ public class ModelBaseController : MonoBehaviour
 
     }
 
-    public void SetColliderTags()
+    public void SetCheckerToDamage()
     {
+        foreach(Transform child in transform)
+        {
+            if (child.gameObject.tag == "Move Attack")
+            {
+                moveAttack = child.gameObject;
+            }
+        }
         foreach (Transform child in transform)
         {
-            if(child.gameObject.GetComponentInChildren<MeshRenderer>().material != null)
+            if(child.gameObject.GetComponent<CheckerScript>())
             {
-                Debug.Log("log");
-            }
-            /*if (child.gameObject.GetComponentInChildren<MeshRenderer>().material == shield)
-            {
-                child.gameObject.tag = "Shield";
-            }
-            else if (child.gameObject.GetComponentInChildren<MeshRenderer>().material == vulnerable)
-            {
-                child.gameObject.tag = "Vulnerable";
-            }
-            else if (child.gameObject.GetComponentInChildren<MeshRenderer>().material == damage)
-            {
-                child.gameObject.tag = "Move Attack";
-            }*/
+                Debug.Log("here");
+                child.parent = moveAttack.transform;
+            } 
         }
     }
 }
