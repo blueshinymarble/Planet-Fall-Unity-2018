@@ -200,7 +200,6 @@ public class ButtonController : MonoBehaviour
 
     public void MoveUnitOneSpace()
     {
-
         // if this button is pressed the unit moves one space in the direction of its red pip
     }
 }

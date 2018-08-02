@@ -7,22 +7,23 @@ public class Soldier : MonoBehaviour
 {
     public Transform[] thisUnitSlots;
     public GameObject[] Pips;
+    public bool willMove;
+    public bool willShootAndStay;
+    public bool willShootAndMove;
 
     private List<GameObject> pipsList = new List<GameObject>();
     private ModelBaseController baseController;
     private RectTransform soldierPanel;
     private ButtonController buttonController;
-    //bool will move
-    //bool will shoot and remain on my space
-    //bool will shoot and move into that space
-    //bool will rotate
-    //bool will take damage 
-    //bool will be destroyed
+
     //int shield strength that starts at 1
 
 	// Use this for initialization
 	void Start ()
     {
+        willMove = false;
+        willShootAndMove = false;
+        willShootAndStay = false;
         gameObject.tag = "Just Placed";
         gameObject.transform.parent.tag = "Occupied";
         buttonController = GameObject.Find("Button Controller").GetComponent<ButtonController>();
